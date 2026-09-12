@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "structural-semantic-chunker"
+version = "0.1.0"
+description = "Layout-aware PDF parsing, hierarchical chunking and cited hybrid retrieval"
+requires-python = ">=3.10"
+dependencies = ["PyMuPDF>=1.24.14,<2", "numpy>=1.24,<3"]
+
+[project.optional-dependencies]
+semantic = ["sentence-transformers>=5,<6"]
+ocr = ["rapidocr-onnxruntime>=1.4,<2"]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+semantic-chunker = "semantic_chunker.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["semantic_chunker*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
