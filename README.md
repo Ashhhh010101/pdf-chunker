@@ -93,3 +93,7 @@ OCR, headings, table boundaries and reading order are heuristic. Scan OCR does n
 `--strict` exits nonzero for document failures or pages left needing OCR. Other review warnings remain in the report and are not a certification that every figure or cell was understood. Inspect them before production use. Exact dense scanning is simple and reproducible for small and medium corpora; use a vector database/ANN index for much larger corpora. The optional reranker has its own sequence limit and may truncate long context; keep chunks modest and evaluate it against your labels.
 
 Implementation references: [PyMuPDF page extraction, OCR and tables](https://pymupdf.readthedocs.io/en/latest/page.html), [Sentence Transformers semantic search](https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html), and [retrieve and rerank](https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html).
+
+
+
+
