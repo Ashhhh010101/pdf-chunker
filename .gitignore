@@ -5,6 +5,5 @@ __pycache__/
 output/
 tmp/
 .model-cache/
-test-doc/
 output2/
 structural_semantic_chunker.egg-info/

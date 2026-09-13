@@ -1,0 +1,3245 @@
+{
+  "id": "7c7c2d1cdfce3689187a39c4",
+  "source": "D:\\PROJECTS\\semantic_chunker\\test-doc\\electrical_mechanical\\electrical_mechanical_03_tifac_composite_works.pdf",
+  "sha256": "ba32c9e72aa9820a7dd66419e56a24e283bd866ebc0426bc548ff18e1eb2e99f",
+  "title": "Composite Tender Document for Civil and Electrical Works",
+  "page_count": 10,
+  "elements": [
+    {
+      "id": "42f5823f30636587cd17c550",
+      "page": 1,
+      "bbox": [
+        207.89015197753906,
+        106.34636688232422,
+        404.74090576171875,
+        180.6262969970703
+      ],
+      "kind": "paragraph",
+      "text": "Government of India\nMinistry of Science and Technology\nDepartment of Science and Technology\nAdministration II (B) Section\nTechnology Bhavan, New Mehrauli Road\nNew Delhi-110 016",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 0,
+      "section_id": "be6c338a8831e4f6f7da8dd0",
+      "section_path": [],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "eaadcdc43293058258b8ab88",
+      "page": 1,
+      "bbox": [
+        49.68002700805664,
+        192.25607299804688,
+        559.2942504882812,
+        206.44061279296875
+      ],
+      "kind": "heading",
+      "text": "Tender Enquiry No.D-13023/ 1/ 3/ 2015 Admin II (B)\nDate: 17th May, 2018",
+      "font_size": 10.56000804901123,
+      "bold": true,
+      "level": 2,
+      "section_id": "f6f9a23de2e6bfa45fe6aaa9",
+      "section_path": [
+        "Tender Enquiry No.D-13023/ 1/ 3/ 2015 Admin II (B)\nDate: 17th May, 2018"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "c8bae45c1c00b6b6a4a69a51",
+      "page": 1,
+      "bbox": [
+        49.68003463745117,
+        231.7343292236328,
+        68.99817657470703,
+        244.4805908203125
+      ],
+      "kind": "paragraph",
+      "text": "To,",
+      "font_size": 10.56000804901123,
+      "bold": true,
+      "level": 0,
+      "section_id": "f6f9a23de2e6bfa45fe6aaa9",
+      "section_path": [
+        "Tender Enquiry No.D-13023/ 1/ 3/ 2015 Admin II (B)\nDate: 17th May, 2018"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "4d12b02ba135bd5a3946be8f",
+      "page": 1,
+      "bbox": [
+        85.70446014404297,
+        257.2043151855469,
+        235.3100128173828,
+        269.9505615234375
+      ],
+      "kind": "paragraph",
+      "text": "All interested & eligible vendors",
+      "font_size": 10.56000804901123,
+      "bold": false,
+      "level": 0,
+      "section_id": "f6f9a23de2e6bfa45fe6aaa9",
+      "section_path": [
+        "Tender Enquiry No.D-13023/ 1/ 3/ 2015 Admin II (B)\nDate: 17th May, 2018"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "3ba72faf2df6c0d6e0bd1723",
+      "page": 1,
+      "bbox": [
+        55.70441818237305,
+        282.5243225097656,
+        560.25439453125,
+        295.27056884765625
+      ],
+      "kind": "paragraph",
+      "text": "Sub: Percentage Rate Tender & contract for works for repair/ renovation of NIC Room in DST,",
+      "font_size": 10.56000804901123,
+      "bold": true,
+      "level": 0,
+      "section_id": "f6f9a23de2e6bfa45fe6aaa9",
+      "section_path": [
+        "Tender Enquiry No.D-13023/ 1/ 3/ 2015 Admin II (B)\nDate: 17th May, 2018"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "6d2dc91164d9928ebc3b798c",
+      "page": 1,
+      "bbox": [
+        212.81015014648438,
+        295.1244812011719,
+        403.15484619140625,
+        307.8707275390625
+      ],
+      "kind": "heading",
+      "text": "Technology Bhavan, New Delhi -16",
+      "font_size": 10.56000804901123,
+      "bold": true,
+      "level": 2,
+      "section_id": "32f0e026c441f2095b7af1a5",
+      "section_path": [
+        "Technology Bhavan, New Delhi -16"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "05a7b053a4d0a0528fc77b74",
+      "page": 1,
+      "bbox": [
+        257.3301696777344,
+        307.8444519042969,
+        355.4847717285156,
+        320.5906982421875
+      ],
+      "kind": "heading",
+      "text": "(Composite work)",
+      "font_size": 10.56000804901123,
+      "bold": true,
+      "level": 2,
+      "section_id": "513a64a46d7d769285bde0f2",
+      "section_path": [
+        "(Composite work)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "8f89def6fa060dfdac7ee8e7",
+      "page": 1,
+      "bbox": [
+        49.68002700805664,
+        333.76422119140625,
+        100.43446350097656,
+        347.0898742675781
+      ],
+      "kind": "paragraph",
+      "text": "Dear Sirs,",
+      "font_size": 11.040007591247559,
+      "bold": false,
+      "level": 0,
+      "section_id": "513a64a46d7d769285bde0f2",
+      "section_path": [
+        "(Composite work)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "303a2e94d887018e45356c98",
+      "page": 1,
+      "bbox": [
+        49.67990493774414,
+        353.68426513671875,
+        563.5667114257812,
+        473.23065185546875
+      ],
+      "kind": "list_item",
+      "text": "1. For and on behalf of the President of India, sealed tenders are invited in two\n(Prequalification & Financial) bids system for the subject mentioned job in Department of Science\n& Technology, Technology Bhavan, New Delhi-16 as per the following requirements: -\ni) Composite Works (Civil & Electrical): Schedule I\n2.\nIn case your firm is interested & eligible in the above said work, you are requested to quote your\nlowest prices (% above/ below basis) in the enclosed Proforma (Schedule I) in a sealed cover. The\nsealed cover containing the quotation should be super scribed “Quotation for Percentage Rate",
+      "font_size": 11.040007591247559,
+      "bold": false,
+      "level": 0,
+      "section_id": "513a64a46d7d769285bde0f2",
+      "section_path": [
+        "(Composite work)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "d67bfa6f5e0b612abc3ddb21",
+      "page": 1,
+      "bbox": [
+        49.68003463745117,
+        473.2243347167969,
+        563.3701171875,
+        499.8699951171875
+      ],
+      "kind": "paragraph",
+      "text": "Tender & contract for works for Repair/ renovation of NIC Room in DST, Technology\nBhavan, New Delhi -16 (Composite work) ” and to be submitted by 22nd June., 2018 latest by",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 0,
+      "section_id": "513a64a46d7d769285bde0f2",
+      "section_path": [
+        "(Composite work)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "289da2b041e4fc6862c370aa",
+      "page": 1,
+      "bbox": [
+        49.68002700805664,
+        499.74432373046875,
+        563.614990234375,
+        539.7100219726562
+      ],
+      "kind": "list_item",
+      "text": "1500 hours, which will be opened on the same day at 1530 hrs in Raman Auditorium, S & T Block II in\nthe presence of such tenderers who wish to be present. The Department reserves the right to accept or\nreject any quotation/ estimates without assigning any reason thereof.",
+      "font_size": 11.040007591247559,
+      "bold": false,
+      "level": 0,
+      "section_id": "513a64a46d7d769285bde0f2",
+      "section_path": [
+        "(Composite work)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "193a8971472b985d9004672d",
+      "page": 1,
+      "bbox": [
+        49.67959976196289,
+        552.9044189453125,
+        563.6179809570312,
+        752.2554321289062
+      ],
+      "kind": "list_item",
+      "text": "3. The sealed envelope must be accompanied by a Demand Draft/ Pay order/ Banker’s cheque of\nNationalized Bank for Rs.10,000/- (Rupees Ten Thousand only) as Earnest Money Deposit (EMD). The\nearnest money amount will be returned to the unsuccessful firm immediately after the award of the\ncontract to successful bidders and the earnest money of the successful tenderer will be returned only\nafter submission of Performance Guarantee by the bidder.\n4.\nTendering firms fulfilling the requirements in this tender document are requested to quote their\ncompetitive lowest prices as per the requirements given in the attached schedules.\nYours faithfully,\n(Himanshu Gandhi)\nUnder Secretary to the Govt of India\nTel: 26590264",
+      "font_size": 11.040007591247559,
+      "bold": false,
+      "level": 0,
+      "section_id": "513a64a46d7d769285bde0f2",
+      "section_path": [
+        "(Composite work)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "b02b0e24e10ce8ea654c0419",
+      "page": 1,
+      "bbox": [
+        49.68051528930664,
+        765.4498291015625,
+        246.40464782714844,
+        778.7754516601562
+      ],
+      "kind": "heading",
+      "text": "Signature with stamp of the bidder",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 2,
+      "section_id": "7e204c7fed1d5d0964f4c058",
+      "section_path": [
+        "Signature with stamp of the bidder"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "a94d6fb61c2de73dd41c06a1",
+      "page": 2,
+      "bbox": [
+        293.1101989746094,
+        25.074047088623047,
+        319.86456298828125,
+        38.399681091308594
+      ],
+      "kind": "paragraph",
+      "text": "-02-",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 0,
+      "section_id": "7e204c7fed1d5d0964f4c058",
+      "section_path": [
+        "Signature with stamp of the bidder"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "dcc8ce2ba728d2bc19e1a0c4",
+      "page": 2,
+      "bbox": [
+        76.46404266357422,
+        51.59406661987305,
+        536.7304077148438,
+        64.9197006225586
+      ],
+      "kind": "paragraph",
+      "text": "I M P O R T A N T I N F O R M A T I O N & G E N E R A L I N S T R U C T I O N S",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 0,
+      "section_id": "7e204c7fed1d5d0964f4c058",
+      "section_path": [
+        "Signature with stamp of the bidder"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "87e4e3201a8e7e91df71f47a",
+      "page": 2,
+      "bbox": [
+        44.22000074386597,
+        78.41998291015625,
+        561.3599731445313,
+        770.6755142211914
+      ],
+      "kind": "table",
+      "text": "Sl\nNo. | Points | Description\n1. | Purchaser | THE PRESIDENT OF INDIA\n2. | Bid system | This tender will be processed in Two bids system as follows: -\n2.1. This tender shall be processed in two bids system – namely\n(i) Prequalification/ Technical and (ii) Financial Bids. The tenderers shall submit\nboth the bids simultaneously with the same date of receipt i.e. 1500 hrs on 22nd\nJune, 2018. The price bid will be opened, on the date to be fixed later on and\nmade known to the qualified tendering firm only after technical evaluation of all\nthe offers received. Those firms who do not meet the requisite criteria/ non-\nfulfilling the pre-condition requirements, their financial bid shall not be opened\nand the same shall be intimated/ informed/ displayed in the web portal of the\nDepartment. The date of opening of “Financial Bid” will be intimated\ntelephonically. Please indicate valid telephone/ mobile number in Annexure I to\nthis Tender Document.\n2.2. Both the bids –one containing the “Technical bid” duly sealed\nand the other “Financial bid” duly sealed should be submitted in one main\ncover. The main cover should also be wax sealed.\n2.3. The tenderers should very carefully note that price bid, received\nafter opening of Prequalification bid 22nd June, 2018, though before the date\nfixed for the opening of Financial bids will be regarded as late tender and shall\nnot be considered.\n2.3.1. The price bid submitted by such tenderers, whose offers have been\nconsidered as technically not acceptable on the basis of the tender evaluation of\nthe Prequalification bids, shall not be opened. The Department reserves the right\nnot to intimate the Financial bid opening date to such tenderers who do not\nqualify in the prequalification bid.\nAll bidders are therefore required to submit their offers in covers as under:\n(a) FIRST COVER should contain the “Technical offer” submitting the\nfollowing documents: -\ni) Tender documents duly completed and signed BUT WITHOUT\nINDICATING THE RATES QUOTED i.e. Schedule I.\nii) Earnest Money Deposit (EMD) amounting to Rs.10,000/- (Rupees Ten\nThousand only) in the form of DD/ BC/ PO in favour of DDO, DST.\niii) Valid Registration Certificate issued by CPWD, PWD, Public Sector\nundertaking set up by Central/ State Government such as NBCC, TCIL,\nIRCON, RITES etc. for similar nature of jobs (Composite work: Civil &\nElectrical Works).\niv) Valid electrical license.\nv) Valid GST Registration certificate.\nvi) Undertaking that the firm shall not enter into any subcontract agreement\nwith any other contractor.\nvii) The firm shall furnish complete details of Annexure I. Partly/\npartial filled Annexure I shall be considered as not furnishing of complete\ndetails and shall be rejected without assigning any reason thereof.",
+      "font_size": 0.0,
+      "bold": false,
+      "level": 0,
+      "section_id": "7e204c7fed1d5d0964f4c058",
+      "section_path": [
+        "Signature with stamp of the bidder"
+      ],
+      "rows": [
+        [
+          "Sl\nNo.",
+          "Points",
+          "Description"
+        ],
+        [
+          "1.",
+          "Purchaser",
+          "THE PRESIDENT OF INDIA"
+        ],
+        [
+          "2.",
+          "Bid system",
+          "This tender will be processed in Two bids system as follows: -\n2.1. This tender shall be processed in two bids system – namely\n(i) Prequalification/ Technical and (ii) Financial Bids. The tenderers shall submit\nboth the bids simultaneously with the same date of receipt i.e. 1500 hrs on 22nd\nJune, 2018. The price bid will be opened, on the date to be fixed later on and\nmade known to the qualified tendering firm only after technical evaluation of all\nthe offers received. Those firms who do not meet the requisite criteria/ non-\nfulfilling the pre-condition requirements, their financial bid shall not be opened\nand the same shall be intimated/ informed/ displayed in the web portal of the\nDepartment. The date of opening of “Financial Bid” will be intimated\ntelephonically. Please indicate valid telephone/ mobile number in Annexure I to\nthis Tender Document.\n2.2. Both the bids –one containing the “Technical bid” duly sealed\nand the other “Financial bid” duly sealed should be submitted in one main\ncover. The main cover should also be wax sealed.\n2.3. The tenderers should very carefully note that price bid, received\nafter opening of Prequalification bid 22nd June, 2018, though before the date\nfixed for the opening of Financial bids will be regarded as late tender and shall\nnot be considered.\n2.3.1. The price bid submitted by such tenderers, whose offers have been\nconsidered as technically not acceptable on the basis of the tender evaluation of\nthe Prequalification bids, shall not be opened. The Department reserves the right\nnot to intimate the Financial bid opening date to such tenderers who do not\nqualify in the prequalification bid.\nAll bidders are therefore required to submit their offers in covers as under:\n(a) FIRST COVER should contain the “Technical offer” submitting the\nfollowing documents: -\ni) Tender documents duly completed and signed BUT WITHOUT\nINDICATING THE RATES QUOTED i.e. Schedule I.\nii) Earnest Money Deposit (EMD) amounting to Rs.10,000/- (Rupees Ten\nThousand only) in the form of DD/ BC/ PO in favour of DDO, DST.\niii) Valid Registration Certificate issued by CPWD, PWD, Public Sector\nundertaking set up by Central/ State Government such as NBCC, TCIL,\nIRCON, RITES etc. for similar nature of jobs (Composite work: Civil &\nElectrical Works).\niv) Valid electrical license.\nv) Valid GST Registration certificate.\nvi) Undertaking that the firm shall not enter into any subcontract agreement\nwith any other contractor.\nvii) The firm shall furnish complete details of Annexure I. Partly/\npartial filled Annexure I shall be considered as not furnishing of complete\ndetails and shall be rejected without assigning any reason thereof."
+        ]
+      ],
+      "row_boxes": [
+        [
+          44.22000074386597,
+          78.41998291015625,
+          561.3599731445313,
+          105.61920166015625
+        ],
+        [
+          44.22000074386597,
+          105.61920166015625,
+          561.3599731445313,
+          119.41921997070312
+        ],
+        [
+          44.22000074386597,
+          119.41921997070312,
+          561.3599731445313,
+          770.6755142211914
+        ]
+      ],
+      "header": [
+        "Sl\nNo.",
+        "Points",
+        "Description"
+      ],
+      "table_id": "87e4e3201a8e7e91df71f47a",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "c8149d2bb66624e0587732ba",
+      "page": 2,
+      "bbox": [
+        49.68003463745117,
+        783.9301147460938,
+        249.5242156982422,
+        797.2557373046875
+      ],
+      "kind": "footer",
+      "text": "Signature with stamp of the bidder",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 0,
+      "section_id": "",
+      "section_path": [],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": true
+    },
+    {
+      "id": "521481bcf4b43509d1dd8ca2",
+      "page": 2,
+      "bbox": [
+        484.92034912109375,
+        797.2745361328125,
+        563.3947143554688,
+        810.6001586914062
+      ],
+      "kind": "paragraph",
+      "text": "Cont’d....03/-",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 0,
+      "section_id": "7e204c7fed1d5d0964f4c058",
+      "section_path": [
+        "Signature with stamp of the bidder"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "945fe882352b7d0343f706c3",
+      "page": 3,
+      "bbox": [
+        311.1101989746094,
+        51.59406661987305,
+        337.86456298828125,
+        64.9197006225586
+      ],
+      "kind": "paragraph",
+      "text": "-03-",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 0,
+      "section_id": "7e204c7fed1d5d0964f4c058",
+      "section_path": [
+        "Signature with stamp of the bidder"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "4bfb20deff38be3a83de51e6",
+      "page": 3,
+      "bbox": [
+        44.24000072479248,
+        78.41998291015625,
+        561.6399739583334,
+        795.7554931640625
+      ],
+      "kind": "table",
+      "text": "Sl\nNo. | Points | Description\n |  | (b) SECOND COVER should contain the “Financial offer” submitting the\nfollowing details: -\ni) Details of rates as per Schedule I (inclusive of all taxes, duties & freight\ncharges) quoted by the bidder. These details should be submitted in the format\ngiven. The words “FINANCIAL BID for Percentage Rate Tender & contract\nfor works for repair/ renovation of NIC Room in DST, Technology\nBhavan, New Delhi -16 (Composite work)” should be written clearly and\nprominently on this envelop along with Tender Number, Name of work & Date of\nopening.\n(c) THIRD COVER: Both the above mentioned covers should be sealed\nseparately and thereafter, be kept in a third cover and again sealed.\nThis cover should also be super scribed with the Tender No., and date\nof tender opening as under: -\nTender No.D-13023/ 1/ 3/ 2015 Admin II (B) Dated 15th May, 2018.\n“TENDER ENQUIRY FOR Percentage Rate Tender & contract for works\nfor repair/ renovation of NIC Room in DST, Technology Bhavan, New\nDelhi -16 (Composite work) NOT TO BE OPENED BEFORE 1530 hrs. On 22nd\nJune, 2018”\n(d) The price of the item should be quoted inclusive of all taxes, duties\nand other charges.\n3. | Eligibility of\nFirm | i. Vendors/ firms registered for similar nature of works (Composite works: Civil\n& Electrical Works) with CPWD, PWD, Public Sector undertaking set up by\nCentral/ State Government such as NBCC, TCIL, IRCON, RITES etc.\nii. Vendors are in possession of valid electrical license.\niii. Submission of EMD as prescribed. No repeat No firm is exempted for\nsubmission of EMD.\niv. Valid GST Registration certificate.\nv. Self-undertaking on the firm’s letter head that the firm will not enter into any\nsub-contract with any other firm.\nvi. Firms/ vendors that do not meet the criteria specified in Point No. (i) above\nare not eligible to participate in the tendering process. If participated, the bid will\nbe rejected straightway without assigning any reason and no representation in\nthis regard will be entertained by the Department.\nThe participating firm is requested to attach the relevant order/ documents in\nsupport of their eligibility with the Technical bid and failure to do so will render\nthe bid incomplete and the same will be rejected straightway without assigning\nany reason thereof. No representation in this regard will be entertained by the\nDepartment.\n4. | Firm and\nfixed rates | Prices should be quoted on a firm & fixed price basis. The prices/rates quoted\nshould be indicated in words as well as in figures and in INR only. Request for\nenhancement of contracted rates shall not be considered under any\ncircumstances. Tenders with variable prices or seeking provision for\nenhancement of prices/contracted rates shall be rejected straightaway without\nany consideration.\n5. | Non-\ntransferability | This tender is non-transferable.",
+      "font_size": 0.0,
+      "bold": false,
+      "level": 0,
+      "section_id": "7e204c7fed1d5d0964f4c058",
+      "section_path": [
+        "Signature with stamp of the bidder"
+      ],
+      "rows": [
+        [
+          "Sl\nNo.",
+          "Points",
+          "Description"
+        ],
+        [
+          "",
+          "",
+          "(b) SECOND COVER should contain the “Financial offer” submitting the\nfollowing details: -\ni) Details of rates as per Schedule I (inclusive of all taxes, duties & freight\ncharges) quoted by the bidder. These details should be submitted in the format\ngiven. The words “FINANCIAL BID for Percentage Rate Tender & contract\nfor works for repair/ renovation of NIC Room in DST, Technology\nBhavan, New Delhi -16 (Composite work)” should be written clearly and\nprominently on this envelop along with Tender Number, Name of work & Date of\nopening.\n(c) THIRD COVER: Both the above mentioned covers should be sealed\nseparately and thereafter, be kept in a third cover and again sealed.\nThis cover should also be super scribed with the Tender No., and date\nof tender opening as under: -\nTender No.D-13023/ 1/ 3/ 2015 Admin II (B) Dated 15th May, 2018.\n“TENDER ENQUIRY FOR Percentage Rate Tender & contract for works\nfor repair/ renovation of NIC Room in DST, Technology Bhavan, New\nDelhi -16 (Composite work) NOT TO BE OPENED BEFORE 1530 hrs. On 22nd\nJune, 2018”\n(d) The price of the item should be quoted inclusive of all taxes, duties\nand other charges."
+        ],
+        [
+          "3.",
+          "Eligibility of\nFirm",
+          "i. Vendors/ firms registered for similar nature of works (Composite works: Civil\n& Electrical Works) with CPWD, PWD, Public Sector undertaking set up by\nCentral/ State Government such as NBCC, TCIL, IRCON, RITES etc.\nii. Vendors are in possession of valid electrical license.\niii. Submission of EMD as prescribed. No repeat No firm is exempted for\nsubmission of EMD.\niv. Valid GST Registration certificate.\nv. Self-undertaking on the firm’s letter head that the firm will not enter into any\nsub-contract with any other firm.\nvi. Firms/ vendors that do not meet the criteria specified in Point No. (i) above\nare not eligible to participate in the tendering process. If participated, the bid will\nbe rejected straightway without assigning any reason and no representation in\nthis regard will be entertained by the Department.\nThe participating firm is requested to attach the relevant order/ documents in\nsupport of their eligibility with the Technical bid and failure to do so will render\nthe bid incomplete and the same will be rejected straightway without assigning\nany reason thereof. No representation in this regard will be entertained by the\nDepartment."
+        ],
+        [
+          "4.",
+          "Firm and\nfixed rates",
+          "Prices should be quoted on a firm & fixed price basis. The prices/rates quoted\nshould be indicated in words as well as in figures and in INR only. Request for\nenhancement of contracted rates shall not be considered under any\ncircumstances. Tenders with variable prices or seeking provision for\nenhancement of prices/contracted rates shall be rejected straightaway without\nany consideration."
+        ],
+        [
+          "5.",
+          "Non-\ntransferability",
+          "This tender is non-transferable."
+        ]
+      ],
+      "row_boxes": [
+        [
+          44.24000072479248,
+          78.41998291015625,
+          561.6399739583334,
+          105.61920166015625
+        ],
+        [
+          44.24000072479248,
+          105.61920166015625,
+          561.6399739583334,
+          438.0503845214844
+        ],
+        [
+          44.24000072479248,
+          438.0503845214844,
+          561.6399739583334,
+          690.9403076171875
+        ],
+        [
+          44.24000072479248,
+          690.9403076171875,
+          561.6399739583334,
+          771.0955200195312
+        ],
+        [
+          44.24000072479248,
+          771.0955200195312,
+          561.6399739583334,
+          795.7554931640625
+        ]
+      ],
+      "header": [
+        "Sl\nNo.",
+        "Points",
+        "Description"
+      ],
+      "table_id": "4bfb20deff38be3a83de51e6",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "62e43de6baf508a17f9f69a4",
+      "page": 3,
+      "bbox": [
+        49.68003463745117,
+        795.8345336914062,
+        246.62017822265625,
+        809.16015625
+      ],
+      "kind": "footer",
+      "text": "Signature with stamp of the bidder",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 0,
+      "section_id": "",
+      "section_path": [],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": true
+    },
+    {
+      "id": "5f129d1751511b630abacf20",
+      "page": 4,
+      "bbox": [
+        484.92034912109375,
+        11.753979682922363,
+        563.394775390625,
+        25.079612731933594
+      ],
+      "kind": "paragraph",
+      "text": "Cont’d....04/-",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 0,
+      "section_id": "7e204c7fed1d5d0964f4c058",
+      "section_path": [
+        "Signature with stamp of the bidder"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "d68556a1202b53957bab91e2",
+      "page": 4,
+      "bbox": [
+        311.1101989746094,
+        78.13380432128906,
+        337.86456298828125,
+        91.45943450927734
+      ],
+      "kind": "paragraph",
+      "text": "-04-",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 0,
+      "section_id": "7e204c7fed1d5d0964f4c058",
+      "section_path": [
+        "Signature with stamp of the bidder"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "2e25834f24174a3d93e7b430",
+      "page": 4,
+      "bbox": [
+        44.256000709533694,
+        118.27923583984375,
+        561.4908835671165,
+        773.6755142211914
+      ],
+      "kind": "table",
+      "text": "Sl\nNo. | Points | Description\n6. | Terms &\nconditions | Terms & Conditions as set out in this Tender Document shall have to be complied\nwith by the tendering firm. Offers not complying with such terms &\nconditions shall be ignored/ rejected at the discretion of this Department.\n7. | Earnest\nMoney\nDeposit | The requisite amount has to be submitted by way of Demand Draft, Pay\nOrder/Banker’s Cheque along with the original copy of the tender submitted by\nthe firm in the name of DDO, DST, New Delhi. Payment by any other mode shall\nnot be acceptable. Offers received without EMD shall be ignored straightaway\nand will not be considered under any circumstances. EMD of tendering firms who\nsubmit the sealed quotation but withdraw the same before expiry of the tender\nvalidity date may be forfeited.\n8. | Performance\nGuarantee | Successful bidders who are awarded the work order for carrying out the jobs on\nthe basis of this Tender Enquiry shall be required to furnish a Performance\nSecurity for a period of nine months (work execution period + warranty period) of\nan amount equal to 5% of the awarded cost of the contract (excluding statutory\nduties and taxes) in the form of DD/ Pay order, Banker’s Cheque, Fixed Deposit\nReceipt (FDR) or Bank Guarantee from any Nationalized Indian Bank within 15\ndays of the award of the Contract. The format for such Performance Bank\nGuarantee (PBG) will be provided by DST along with the work order. In the event\nof failure on the part of the successful bidder awarded the Contract to furnish\nPerformance Security, EMD furnished with the Tender by such firm shall stand\nforfeited and the award of contract will also be cancelled. The DD/ PO/ BC/ FDR\nshould be in favour of DDO, DST.\n9. | Prescribed\nForms | Tenders of firms received in the format prescribed in this tender document shall\nonly be considered. Offers not received in prescribed format shall be ignored and\nno correspondence in this regard will be entertained. Telegraphic/ Telex/ Fax/ E-\nmail/ Letter Head/ Quotations will not be accepted and ignored straightaway.\n10. | Late/\ndelayed\ntenders | Tenders received late/ delayed after prescribed closing time due to any reason\nwhatsoever will not be accepted under any circumstances. In the event of any\nconfusion, the time set in the clock in the room of Under Secretary (Admn.II-B)\nwill be taken as standard and decisive. Tenderers may note that if the date of\ntender opening given in this Tender Document is declared a closed holiday by the\nCentral Government, the tender shall be opened on the next working day at the\nsame timing. In such an event the closing hours for receipt of tenders in DST will\nstand automatically extended up to 1500 hours of the next working day in the\nCentral Government offices.\n11. | Purchaser’s\nright | Purchaser reserves the right to reject any tender/all tenders in full or part thereof\nwithout assigning any reasons.\n12 | Duties &\nTaxes | Rate should be quoted considering GST. GST, if claimed separately by the\nsuccessful bidder, will not be paid separately.\n13 | Purchaser’s\nAddress | The quotation should be addressed to “Under Secretary, Admin II (B) Section,\nDepartment of Science & Technology, Technology Bhavan, New Mehrauli Road,\nNew Delhi-16 and should be dropped in the Tender Box of Admn. II B Section\nkept near Reception Room at the entrance of Technology Bhavan, New Mehrauli\nRoad, New Delhi on or before at 1500 hours on 22nd June, 2018. In case the\nsealed envelope is larger than the mouth of the Tender Box, and cannot be\ndropped in the Tender Box, the same may be submitted by hand to Under\nSecretary, Admn.II B or S.O. Admn II B, DST.",
+      "font_size": 0.0,
+      "bold": false,
+      "level": 0,
+      "section_id": "7e204c7fed1d5d0964f4c058",
+      "section_path": [
+        "Signature with stamp of the bidder"
+      ],
+      "rows": [
+        [
+          "Sl\nNo.",
+          "Points",
+          "Description"
+        ],
+        [
+          "6.",
+          "Terms &\nconditions",
+          "Terms & Conditions as set out in this Tender Document shall have to be complied\nwith by the tendering firm. Offers not complying with such terms &\nconditions shall be ignored/ rejected at the discretion of this Department."
+        ],
+        [
+          "7.",
+          "Earnest\nMoney\nDeposit",
+          "The requisite amount has to be submitted by way of Demand Draft, Pay\nOrder/Banker’s Cheque along with the original copy of the tender submitted by\nthe firm in the name of DDO, DST, New Delhi. Payment by any other mode shall\nnot be acceptable. Offers received without EMD shall be ignored straightaway\nand will not be considered under any circumstances. EMD of tendering firms who\nsubmit the sealed quotation but withdraw the same before expiry of the tender\nvalidity date may be forfeited."
+        ],
+        [
+          "8.",
+          "Performance\nGuarantee",
+          "Successful bidders who are awarded the work order for carrying out the jobs on\nthe basis of this Tender Enquiry shall be required to furnish a Performance\nSecurity for a period of nine months (work execution period + warranty period) of\nan amount equal to 5% of the awarded cost of the contract (excluding statutory\nduties and taxes) in the form of DD/ Pay order, Banker’s Cheque, Fixed Deposit\nReceipt (FDR) or Bank Guarantee from any Nationalized Indian Bank within 15\ndays of the award of the Contract. The format for such Performance Bank\nGuarantee (PBG) will be provided by DST along with the work order. In the event\nof failure on the part of the successful bidder awarded the Contract to furnish\nPerformance Security, EMD furnished with the Tender by such firm shall stand\nforfeited and the award of contract will also be cancelled. The DD/ PO/ BC/ FDR\nshould be in favour of DDO, DST."
+        ],
+        [
+          "9.",
+          "Prescribed\nForms",
+          "Tenders of firms received in the format prescribed in this tender document shall\nonly be considered. Offers not received in prescribed format shall be ignored and\nno correspondence in this regard will be entertained. Telegraphic/ Telex/ Fax/ E-\nmail/ Letter Head/ Quotations will not be accepted and ignored straightaway."
+        ],
+        [
+          "10.",
+          "Late/\ndelayed\ntenders",
+          "Tenders received late/ delayed after prescribed closing time due to any reason\nwhatsoever will not be accepted under any circumstances. In the event of any\nconfusion, the time set in the clock in the room of Under Secretary (Admn.II-B)\nwill be taken as standard and decisive. Tenderers may note that if the date of\ntender opening given in this Tender Document is declared a closed holiday by the\nCentral Government, the tender shall be opened on the next working day at the\nsame timing. In such an event the closing hours for receipt of tenders in DST will\nstand automatically extended up to 1500 hours of the next working day in the\nCentral Government offices."
+        ],
+        [
+          "11.",
+          "Purchaser’s\nright",
+          "Purchaser reserves the right to reject any tender/all tenders in full or part thereof\nwithout assigning any reasons."
+        ],
+        [
+          "12",
+          "Duties &\nTaxes",
+          "Rate should be quoted considering GST. GST, if claimed separately by the\nsuccessful bidder, will not be paid separately."
+        ],
+        [
+          "13",
+          "Purchaser’s\nAddress",
+          "The quotation should be addressed to “Under Secretary, Admin II (B) Section,\nDepartment of Science & Technology, Technology Bhavan, New Mehrauli Road,\nNew Delhi-16 and should be dropped in the Tender Box of Admn. II B Section\nkept near Reception Room at the entrance of Technology Bhavan, New Mehrauli\nRoad, New Delhi on or before at 1500 hours on 22nd June, 2018. In case the\nsealed envelope is larger than the mouth of the Tender Box, and cannot be\ndropped in the Tender Box, the same may be submitted by hand to Under\nSecretary, Admn.II B or S.O. Admn II B, DST."
+        ]
+      ],
+      "row_boxes": [
+        [
+          44.256000709533694,
+          118.27923583984375,
+          561.4908835671165,
+          145.459228515625
+        ],
+        [
+          44.256000709533694,
+          145.459228515625,
+          561.4908835671165,
+          185.77923583984375
+        ],
+        [
+          44.256000709533694,
+          185.77923583984375,
+          561.4908835671165,
+          279.2904052734375
+        ],
+        [
+          44.256000709533694,
+          279.2904052734375,
+          561.4908835671165,
+          439.01039123535156
+        ],
+        [
+          44.256000709533694,
+          439.01039123535156,
+          561.4908835671165,
+          492.6696014404297
+        ],
+        [
+          44.256000709533694,
+          492.6696014404297,
+          561.4908835671165,
+          612.6702880859375
+        ],
+        [
+          44.256000709533694,
+          612.6702880859375,
+          561.4908835671165,
+          639.8203125
+        ],
+        [
+          44.256000709533694,
+          639.8203125,
+          561.4908835671165,
+          666.8203125
+        ],
+        [
+          44.256000709533694,
+          666.8203125,
+          561.4908835671165,
+          773.6755142211914
+        ]
+      ],
+      "header": [
+        "Sl\nNo.",
+        "Points",
+        "Description"
+      ],
+      "table_id": "2e25834f24174a3d93e7b430",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "e9114978a99d9b2a71ffd397",
+      "page": 4,
+      "bbox": [
+        49.68002700805664,
+        786.9301147460938,
+        246.40415954589844,
+        800.2557373046875
+      ],
+      "kind": "footer",
+      "text": "Signature with stamp of the bidder",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 0,
+      "section_id": "",
+      "section_path": [],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": true
+    },
+    {
+      "id": "ca72ea50677779136fc3f132",
+      "page": 5,
+      "bbox": [
+        484.92034912109375,
+        11.753979682922363,
+        563.3947143554688,
+        25.079612731933594
+      ],
+      "kind": "paragraph",
+      "text": "Cont’d....05/-",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 0,
+      "section_id": "7e204c7fed1d5d0964f4c058",
+      "section_path": [
+        "Signature with stamp of the bidder"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "38cd540dca697c2d57f243a9",
+      "page": 5,
+      "bbox": [
+        311.1101989746094,
+        91.45381164550781,
+        337.86456298828125,
+        104.7794418334961
+      ],
+      "kind": "paragraph",
+      "text": "-05-",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 0,
+      "section_id": "7e204c7fed1d5d0964f4c058",
+      "section_path": [
+        "Signature with stamp of the bidder"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "54ca5044f186677ac2d35eb9",
+      "page": 5,
+      "bbox": [
+        44.26285784585135,
+        118.27923583984375,
+        562.6399861653646,
+        800.9155044555664
+      ],
+      "kind": "table",
+      "text": "Sl\nNo. | Points | Description\n14 | Earnest\nMoney | Firms shall be required to deposit Earnest Money of specified amount. Offers\nreceived without Earnest Money or with Earnest Money lower than the amount\nspecified will be liable to be summarily ignored. Tenders received not in\nconformity to the EMD guidelines instructions/ conditions in the Tender Enquiry\nwould be liable to be ignored summarily.\n15 | Liquidated\nDamages | In case the firm does not complete the work within the prescribed execution\nperiod, action will be taken against the firm to recover from the contractor as\nagreed liquidated damages including administrative expenses (Not to be treated\nas penalty) a sum equivalent to 1⁄2 % per week of the price of any stores which\nthe contractor has failed to execute/ deliver/install within the stipulated time limit.\nWhere delivery thereof is accepted after expiry of the aforesaid period, the total\ndamages so claimed shall not exceed 10% of the total contract price.\n16 | Inspecting\nOfficer | Authorized representative of DST, New Delhi\n17 | Inspection\nAuthority | Department of Science and Technology (DST), Technology Bhavan, New Delhi or\nany party, a Govt. agency, so authorized by DST.\n18 | Work site | DST, Technology Bhavan, New Delhi-16.\n19 | Job\nExecution\nperiod | Within 45 days of the receipt of confirmed work order by the firm.\n20 | Dispatch\ninstructions | Stores are required to be delivered at the Technology Bhavan premises on free\ndelivery to the consignee’s premises/ freight paid basis.\n21 | Payments\nTerms | 100% payment shall be released on successful execution of the work complete.\nThe quantity mentioned in the schedule 1 to this Tender Enquiry Notice is\ntentative. The actual work may vary in lower or upper side of the given quantity.\nThe payment will be made on actual execution of work. Advance payment will not\nbe made under any circumstances.\n22 | Paying\nAuthority | Controller of Accounts or his authorized representative, Pay & Accounts Office,\nDST, New Delhi-110016\n23 | Acceptance\nof offer/\nEvaluation of\nbid | The bid will be evaluated on the basis of percentage (%) above/ below of the\ngiven cost of work in the schedule. The firm is quoting the lowest percentage\n(%) will be awarded the work. In case, if two firms have quoted the same rate,\nthe contract will be awarded to the firm considering the date of registration of the\nfirm with CPWD, PWD, Public Sector Undertaking set up by Central/ State\nGovernment under Memorandum of Article of Association of respective Ministry/\nDepartment will be taken into account i.e. the firm with older registration date will\nbe awarded the work.\n24 | Warranty | Six months comprehensive from the date of completion of job. Any complaint\nshall be attended within a response time of 48 hours on 24X7 basis. Any defects\nin workmanship or detoriation in the quality or deviation to tender specifications\ncoming to notice shall be rectified at site within 72 hours of the reporting of the\nsame to the contractor. If system is required to be picked up and taken to your\npremises for removing the defects, the same shall be picked up from the\nconsignee latest by the next working day and dropped back to the consignee\nwithin 07 working days. Any component required to be replaced within the\nwarranty period shall be totally new a component and not a reconditioned or\nrepaired component.\n25 | Validity of\ntender | Tender shall be kept valid for acceptance by DST for a period not less than 60 days\nafter the tender opening date.",
+      "font_size": 0.0,
+      "bold": false,
+      "level": 0,
+      "section_id": "7e204c7fed1d5d0964f4c058",
+      "section_path": [
+        "Signature with stamp of the bidder"
+      ],
+      "rows": [
+        [
+          "Sl\nNo.",
+          "Points",
+          "Description"
+        ],
+        [
+          "14",
+          "Earnest\nMoney",
+          "Firms shall be required to deposit Earnest Money of specified amount. Offers\nreceived without Earnest Money or with Earnest Money lower than the amount\nspecified will be liable to be summarily ignored. Tenders received not in\nconformity to the EMD guidelines instructions/ conditions in the Tender Enquiry\nwould be liable to be ignored summarily."
+        ],
+        [
+          "15",
+          "Liquidated\nDamages",
+          "In case the firm does not complete the work within the prescribed execution\nperiod, action will be taken against the firm to recover from the contractor as\nagreed liquidated damages including administrative expenses (Not to be treated\nas penalty) a sum equivalent to 1⁄2 % per week of the price of any stores which\nthe contractor has failed to execute/ deliver/install within the stipulated time limit.\nWhere delivery thereof is accepted after expiry of the aforesaid period, the total\ndamages so claimed shall not exceed 10% of the total contract price."
+        ],
+        [
+          "16",
+          "Inspecting\nOfficer",
+          "Authorized representative of DST, New Delhi"
+        ],
+        [
+          "17",
+          "Inspection\nAuthority",
+          "Department of Science and Technology (DST), Technology Bhavan, New Delhi or\nany party, a Govt. agency, so authorized by DST."
+        ],
+        [
+          "18",
+          "Work site",
+          "DST, Technology Bhavan, New Delhi-16."
+        ],
+        [
+          "19",
+          "Job\nExecution\nperiod",
+          "Within 45 days of the receipt of confirmed work order by the firm."
+        ],
+        [
+          "20",
+          "Dispatch\ninstructions",
+          "Stores are required to be delivered at the Technology Bhavan premises on free\ndelivery to the consignee’s premises/ freight paid basis."
+        ],
+        [
+          "21",
+          "Payments\nTerms",
+          "100% payment shall be released on successful execution of the work complete.\nThe quantity mentioned in the schedule 1 to this Tender Enquiry Notice is\ntentative. The actual work may vary in lower or upper side of the given quantity.\nThe payment will be made on actual execution of work. Advance payment will not\nbe made under any circumstances."
+        ],
+        [
+          "22",
+          "Paying\nAuthority",
+          "Controller of Accounts or his authorized representative, Pay & Accounts Office,\nDST, New Delhi-110016"
+        ],
+        [
+          "23",
+          "Acceptance\nof offer/\nEvaluation of\nbid",
+          "The bid will be evaluated on the basis of percentage (%) above/ below of the\ngiven cost of work in the schedule. The firm is quoting the lowest percentage\n(%) will be awarded the work. In case, if two firms have quoted the same rate,\nthe contract will be awarded to the firm considering the date of registration of the\nfirm with CPWD, PWD, Public Sector Undertaking set up by Central/ State\nGovernment under Memorandum of Article of Association of respective Ministry/\nDepartment will be taken into account i.e. the firm with older registration date will\nbe awarded the work."
+        ],
+        [
+          "24",
+          "Warranty",
+          "Six months comprehensive from the date of completion of job. Any complaint\nshall be attended within a response time of 48 hours on 24X7 basis. Any defects\nin workmanship or detoriation in the quality or deviation to tender specifications\ncoming to notice shall be rectified at site within 72 hours of the reporting of the\nsame to the contractor. If system is required to be picked up and taken to your\npremises for removing the defects, the same shall be picked up from the\nconsignee latest by the next working day and dropped back to the consignee\nwithin 07 working days. Any component required to be replaced within the\nwarranty period shall be totally new a component and not a reconditioned or\nrepaired component."
+        ],
+        [
+          "25",
+          "Validity of\ntender",
+          "Tender shall be kept valid for acceptance by DST for a period not less than 60 days\nafter the tender opening date."
+        ]
+      ],
+      "row_boxes": [
+        [
+          44.26285784585135,
+          118.27923583984375,
+          562.6399861653646,
+          145.459228515625
+        ],
+        [
+          44.26285784585135,
+          145.459228515625,
+          562.6399861653646,
+          212.29922485351562
+        ],
+        [
+          44.26285784585135,
+          212.29922485351562,
+          562.6399861653646,
+          305.8103942871094
+        ],
+        [
+          44.26285784585135,
+          305.8103942871094,
+          562.6399861653646,
+          332.8103790283203
+        ],
+        [
+          44.26285784585135,
+          332.8103790283203,
+          562.6399861653646,
+          359.9303894042969
+        ],
+        [
+          44.26285784585135,
+          359.9303894042969,
+          562.6399861653646,
+          373.7303924560547
+        ],
+        [
+          44.26285784585135,
+          373.7303924560547,
+          562.6399861653646,
+          414.0503845214844
+        ],
+        [
+          44.26285784585135,
+          414.0503845214844,
+          562.6399861653646,
+          441.0503845214844
+        ],
+        [
+          44.26285784585135,
+          441.0503845214844,
+          562.6399861653646,
+          508.02960205078125
+        ],
+        [
+          44.26285784585135,
+          508.02960205078125,
+          562.6399861653646,
+          535.0296020507812
+        ],
+        [
+          44.26285784585135,
+          535.0296020507812,
+          562.6399861653646,
+          641.7403259277344
+        ],
+        [
+          44.26285784585135,
+          641.7403259277344,
+          562.6399861653646,
+          775.0555114746094
+        ],
+        [
+          44.26285784585135,
+          775.0555114746094,
+          562.6399861653646,
+          800.9155044555664
+        ]
+      ],
+      "header": [
+        "Sl\nNo.",
+        "Points",
+        "Description"
+      ],
+      "table_id": "54ca5044f186677ac2d35eb9",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "2acb9cf1d711e9e13117fd00",
+      "page": 5,
+      "bbox": [
+        49.68003463745117,
+        813.1145629882812,
+        249.5242156982422,
+        826.440185546875
+      ],
+      "kind": "footer",
+      "text": "Signature with stamp of the bidder",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 0,
+      "section_id": "",
+      "section_path": [],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": true
+    },
+    {
+      "id": "e1f42f6af04d92b9cf4da2ff",
+      "page": 6,
+      "bbox": [
+        276.9101867675781,
+        118.09439086914062,
+        335.8680725097656,
+        130.11643981933594
+      ],
+      "kind": "heading",
+      "text": "Annexure I",
+      "font_size": 9.960006713867188,
+      "bold": true,
+      "level": 1,
+      "section_id": "63b34943ed1a4e8619c33413",
+      "section_path": [
+        "Annexure I"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "151708338c98ddb131348af1",
+      "page": 6,
+      "bbox": [
+        212.08953857421875,
+        142.21463012695312,
+        400.5782165527344,
+        166.35667419433594
+      ],
+      "kind": "heading",
+      "text": "Department of Science & Technology\nAdmin II (B) Section",
+      "font_size": 9.960006713867188,
+      "bold": true,
+      "level": 2,
+      "section_id": "0f7897b62cf7e48fcb51babc",
+      "section_path": [
+        "Annexure I",
+        "Department of Science & Technology\nAdmin II (B) Section"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "5fbbba2e95470fb1fe2c868e",
+      "page": 6,
+      "bbox": [
+        89.06446075439453,
+        166.45462036132812,
+        526.7181396484375,
+        178.47666931152344
+      ],
+      "kind": "heading",
+      "text": "Contractor’s details: Mandatory Information (To be filled with supporting document)",
+      "font_size": 9.960006713867188,
+      "bold": true,
+      "level": 2,
+      "section_id": "4cee7121eff468f770028ac1",
+      "section_path": [
+        "Annexure I",
+        "Contractor’s details: Mandatory Information (To be filled with supporting document)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "1ba3329d050f0f5d1918916e",
+      "page": 6,
+      "bbox": [
+        49.68002700805664,
+        190.57461547851562,
+        562.66064453125,
+        214.5967254638672
+      ],
+      "kind": "paragraph",
+      "text": "Supporting documents be annexed with the application form (Applications found deficient in any respect\nare liable to be rejected without further correspondence)",
+      "font_size": 9.960006713867188,
+      "bold": false,
+      "level": 0,
+      "section_id": "4cee7121eff468f770028ac1",
+      "section_path": [
+        "Annexure I",
+        "Contractor’s details: Mandatory Information (To be filled with supporting document)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "e36e00149503a98c94a33b74",
+      "page": 6,
+      "bbox": [
+        44.27142926624843,
+        226.99920654296875,
+        554.1685442243304,
+        826.739990234375
+      ],
+      "kind": "table",
+      "text": "Sl\nNo. | Description | Information |  |  |  | \n01 | Name of the Applicant |  |  |  |  | \n02 | Nationality |  |  |  |  | \n03 | Address\n(attach separate paper for\naddresses of other offices) | Regd. Office |  |  |  | \n |  | Head office |  |  |  | \n04 | Telephone Numbers | Landline No. |  |  |  | \n |  | Mobile No. |  |  |  | \n |  | Fax No. |  |  |  | \n |  | E-mail address |  |  |  | \n05 | Other Details | PAN Details |  |  |  | \n |  | GST Registration Number |  |  |  | \n06 | Constitution | Individual |  |  |  | \n |  | Sole Proprietorship Concern |  |  |  | \n |  | Partnership Firm |  |  |  | \n |  | Public Ltd. Company |  |  |  | \n |  | Private ltd. Company/ Public\nSector Enterprises |  |  |  | \n07 | If partnership firm/ If\ncompany, Name of all\nPartners/ Directors or Board |  |  |  |  | \n |  |  |  |  |  | \n08 | Is the Individual/ sole\nProprietor/ any Partner of\nthe Firm/ Director of\nCompany | Dismissed Government Servant | yes |  | No | \n |  | Removed from approved list of\ncontractors | Yes |  | No | \n |  | Demoted to a lower class of\ncontractors in CPWD/ PWDs | Yes |  | No | \n |  | Convicted by a court of law | Yes |  | No | \n |  | Retired official of Govt of India\nwithin last one year | Yes |  | No | \n |  | Director or partner of any other\ncompany/ firm with CPWD/\nPWDs or any other Govt\nDepartment | Yes |  | No | \n |  | Member of Parliament or any\nState Legislative Assembly | Yes |  | No | \n |  | If answer to any of the above is “Yes”, furnish requisite details on a\nseparate sheet |  |  |  | \n09 | Whether the firm is holding\nvalid electrical license issued\nby the Competent Authority |  |  |  |  | ",
+      "font_size": 0.0,
+      "bold": false,
+      "level": 0,
+      "section_id": "4cee7121eff468f770028ac1",
+      "section_path": [
+        "Annexure I",
+        "Contractor’s details: Mandatory Information (To be filled with supporting document)"
+      ],
+      "rows": [
+        [
+          "Sl\nNo.",
+          "Description",
+          "Information",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "01",
+          "Name of the Applicant",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "02",
+          "Nationality",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "03",
+          "Address\n(attach separate paper for\naddresses of other offices)",
+          "Regd. Office",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Head office",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "04",
+          "Telephone Numbers",
+          "Landline No.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Mobile No.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Fax No.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "E-mail address",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "05",
+          "Other Details",
+          "PAN Details",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "GST Registration Number",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "06",
+          "Constitution",
+          "Individual",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Sole Proprietorship Concern",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Partnership Firm",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Public Ltd. Company",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Private ltd. Company/ Public\nSector Enterprises",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "07",
+          "If partnership firm/ If\ncompany, Name of all\nPartners/ Directors or Board",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "08",
+          "Is the Individual/ sole\nProprietor/ any Partner of\nthe Firm/ Director of\nCompany",
+          "Dismissed Government Servant",
+          "yes",
+          "",
+          "No",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Removed from approved list of\ncontractors",
+          "Yes",
+          "",
+          "No",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Demoted to a lower class of\ncontractors in CPWD/ PWDs",
+          "Yes",
+          "",
+          "No",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Convicted by a court of law",
+          "Yes",
+          "",
+          "No",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Retired official of Govt of India\nwithin last one year",
+          "Yes",
+          "",
+          "No",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Director or partner of any other\ncompany/ firm with CPWD/\nPWDs or any other Govt\nDepartment",
+          "Yes",
+          "",
+          "No",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Member of Parliament or any\nState Legislative Assembly",
+          "Yes",
+          "",
+          "No",
+          ""
+        ],
+        [
+          "",
+          "",
+          "If answer to any of the above is “Yes”, furnish requisite details on a\nseparate sheet",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "09",
+          "Whether the firm is holding\nvalid electrical license issued\nby the Competent Authority",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "row_boxes": [
+        [
+          44.27142926624843,
+          226.99920654296875,
+          554.1685442243304,
+          251.65921020507812
+        ],
+        [
+          44.27142926624843,
+          251.65921020507812,
+          554.1685442243304,
+          276.2904052734375
+        ],
+        [
+          44.27142926624843,
+          276.2904052734375,
+          554.1685442243304,
+          301.0103759765625
+        ],
+        [
+          44.27142926624843,
+          301.0103759765625,
+          554.1685442243304,
+          374.33038330078125
+        ],
+        [
+          215.08966827392578,
+          337.7303924560547,
+          554.1685442243304,
+          374.33038330078125
+        ],
+        [
+          44.27142926624843,
+          374.33038330078125,
+          554.1685442243304,
+          436.37037658691406
+        ],
+        [
+          215.08966827392578,
+          389.9303741455078,
+          554.1685442243304,
+          405.41038513183594
+        ],
+        [
+          215.08966827392578,
+          405.41038513183594,
+          554.1685442243304,
+          420.890380859375
+        ],
+        [
+          215.08966827392578,
+          420.890380859375,
+          554.1685442243304,
+          436.37037658691406
+        ],
+        [
+          44.27142926624843,
+          436.37037658691406,
+          554.1685442243304,
+          461.589599609375
+        ],
+        [
+          215.08966827392578,
+          448.98960876464844,
+          554.1685442243304,
+          461.589599609375
+        ],
+        [
+          44.27142926624843,
+          461.589599609375,
+          554.1685442243304,
+          536.4696044921875
+        ],
+        [
+          215.08966827392578,
+          474.06959533691406,
+          554.1685442243304,
+          486.6696014404297
+        ],
+        [
+          215.08966827392578,
+          486.6696014404297,
+          554.1685442243304,
+          499.2696075439453
+        ],
+        [
+          215.08966827392578,
+          499.2696075439453,
+          554.1685442243304,
+          511.86961364746094
+        ],
+        [
+          215.08966827392578,
+          511.86961364746094,
+          554.1685442243304,
+          536.4696044921875
+        ],
+        [
+          44.27142926624843,
+          536.4696044921875,
+          554.1685442243304,
+          577.2696228027344
+        ],
+        [
+          215.08966827392578,
+          556.86962890625,
+          554.1685442243304,
+          577.2696228027344
+        ],
+        [
+          44.27142926624843,
+          577.2696228027344,
+          554.1685442243304,
+          789.9354858398438
+        ],
+        [
+          215.08966827392578,
+          597.549560546875,
+          554.1685442243304,
+          622.1502990722656
+        ],
+        [
+          215.08966827392578,
+          622.1502990722656,
+          554.1685442243304,
+          646.9002990722656
+        ],
+        [
+          215.08966827392578,
+          646.9002990722656,
+          554.1685442243304,
+          667.1802978515625
+        ],
+        [
+          215.08966827392578,
+          667.1802978515625,
+          554.1685442243304,
+          691.9002990722656
+        ],
+        [
+          215.08966827392578,
+          691.9002990722656,
+          554.1685442243304,
+          740.6203002929688
+        ],
+        [
+          215.08966827392578,
+          740.6203002929688,
+          554.1685442243304,
+          765.3355102539062
+        ],
+        [
+          215.08966827392578,
+          765.3355102539062,
+          554.1685442243304,
+          789.9354858398438
+        ],
+        [
+          44.27142926624843,
+          789.9354858398438,
+          554.1685442243304,
+          826.739990234375
+        ]
+      ],
+      "header": [
+        "Sl\nNo.",
+        "Description",
+        "Information",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "table_id": "e36e00149503a98c94a33b74",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "69b939b093164ce4f19e2a6b",
+      "page": 7,
+      "bbox": [
+        81.62445831298828,
+        12.35452651977539,
+        145.5723114013672,
+        24.37656593322754
+      ],
+      "kind": "paragraph",
+      "text": "(Attach Copy)",
+      "font_size": 9.960006713867188,
+      "bold": false,
+      "level": 0,
+      "section_id": "4cee7121eff468f770028ac1",
+      "section_path": [
+        "Annexure I",
+        "Contractor’s details: Mandatory Information (To be filled with supporting document)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "b43e426a0c5769a447ae62aa",
+      "page": 7,
+      "bbox": [
+        49.68003463745117,
+        24.95456314086914,
+        212.6158905029297,
+        49.09659957885742
+      ],
+      "kind": "list_item",
+      "text": "10\nName of the Bankers with\nfull details/ orders",
+      "font_size": 9.960006713867188,
+      "bold": false,
+      "level": 0,
+      "section_id": "4cee7121eff468f770028ac1",
+      "section_path": [
+        "Annexure I",
+        "Contractor’s details: Mandatory Information (To be filled with supporting document)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "dfd51ed442478082e28c9ac2",
+      "page": 7,
+      "bbox": [
+        49.68003463745117,
+        61.67453384399414,
+        154.69227600097656,
+        73.69657135009766
+      ],
+      "kind": "paragraph",
+      "text": "Signature of the bidder",
+      "font_size": 9.960006713867188,
+      "bold": false,
+      "level": 0,
+      "section_id": "4cee7121eff468f770028ac1",
+      "section_path": [
+        "Annexure I",
+        "Contractor’s details: Mandatory Information (To be filled with supporting document)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "6104108878969e72f4cfdb90",
+      "page": 7,
+      "bbox": [
+        494.88037109375,
+        73.79458618164062,
+        563.0784301757812,
+        85.8166275024414
+      ],
+      "kind": "paragraph",
+      "text": "Cont’d...02/-",
+      "font_size": 9.960006713867188,
+      "bold": true,
+      "level": 0,
+      "section_id": "4cee7121eff468f770028ac1",
+      "section_path": [
+        "Annexure I",
+        "Contractor’s details: Mandatory Information (To be filled with supporting document)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "eaac16d804f78df31e5af007",
+      "page": 7,
+      "bbox": [
+        294.1902160644531,
+        109.93460083007812,
+        318.46820068359375,
+        121.9566421508789
+      ],
+      "kind": "paragraph",
+      "text": "-02-",
+      "font_size": 9.960006713867188,
+      "bold": true,
+      "level": 0,
+      "section_id": "4cee7121eff468f770028ac1",
+      "section_path": [
+        "Annexure I",
+        "Contractor’s details: Mandatory Information (To be filled with supporting document)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "96b479a96a484862271f572f",
+      "page": 7,
+      "bbox": [
+        44.2457150050572,
+        134.35921478271484,
+        531.86181640625,
+        570.4895629882812
+      ],
+      "kind": "table",
+      "text": " |  |  |  |  |  | \n11 | Place of business |  |  |  |  | \n12 | Whether Registered with\nCPWD, PWD, Public Sector\nundertaking set up by\nCentral/ State Government\nunder Memorandum of\nArticle of Association of\nrespective Ministry/\nDepartment for Composite\nNature of work (Civil &\nElectrical). |  |  |  |  | \n | If, Yes Name of the\nOrganization with which the\nfirm is registered |  |  |  |  | \n | Specify Registration details\nand date of registration for\nComposite works (Civil &\nElectrical) Attach\nDocumentary Proof |  |  |  |  | \n13 | Is any person working with\nthe applicant a near relative\nof the official of DST? If\nyes, give details |  | Yes |  | No | \n14 | Certificates |  |  |  |  | \n | a) | I/ we (including all partners) certify that I/ we have read the Terms & Conditions mentioned in\nthe tender enquiry form and shall abide by them |  |  |  | \n | b) | I/ we certify that the information given is true to the best of my/ our knowledge. I/ we also\nunderstand that if any of the information is found wrong/ false at any stage. I/ we are liable\nto be deregistered from panel of approved contractors/ banned for doing any business\ndealings with Government Departments or blacklisted or subject to any monetary penalties\nthat be deemed fit and appropriate by DST/ Government. |  |  |  | \n | c) | I/ we certify that all the pages of the Original Tender Document are duly signed & stamped\nand submitted for consideration of the bid. |  |  |  | ",
+      "font_size": 0.0,
+      "bold": false,
+      "level": 0,
+      "section_id": "4cee7121eff468f770028ac1",
+      "section_path": [
+        "Annexure I",
+        "Contractor’s details: Mandatory Information (To be filled with supporting document)"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "11",
+          "Place of business",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "12",
+          "Whether Registered with\nCPWD, PWD, Public Sector\nundertaking set up by\nCentral/ State Government\nunder Memorandum of\nArticle of Association of\nrespective Ministry/\nDepartment for Composite\nNature of work (Civil &\nElectrical).",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "If, Yes Name of the\nOrganization with which the\nfirm is registered",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Specify Registration details\nand date of registration for\nComposite works (Civil &\nElectrical) Attach\nDocumentary Proof",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "13",
+          "Is any person working with\nthe applicant a near relative\nof the official of DST? If\nyes, give details",
+          "",
+          "Yes",
+          "",
+          "No",
+          ""
+        ],
+        [
+          "14",
+          "Certificates",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "a)",
+          "I/ we (including all partners) certify that I/ we have read the Terms & Conditions mentioned in\nthe tender enquiry form and shall abide by them",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "b)",
+          "I/ we certify that the information given is true to the best of my/ our knowledge. I/ we also\nunderstand that if any of the information is found wrong/ false at any stage. I/ we are liable\nto be deregistered from panel of approved contractors/ banned for doing any business\ndealings with Government Departments or blacklisted or subject to any monetary penalties\nthat be deemed fit and appropriate by DST/ Government.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "c)",
+          "I/ we certify that all the pages of the Original Tender Document are duly signed & stamped\nand submitted for consideration of the bid.",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "row_boxes": [
+        [
+          44.2457150050572,
+          134.35921478271484,
+          531.86181640625,
+          146.89923095703125
+        ],
+        [
+          44.2457150050572,
+          146.89923095703125,
+          531.86181640625,
+          171.61920166015625
+        ],
+        [
+          44.2457150050572,
+          171.61920166015625,
+          531.86181640625,
+          398.9303741455078
+        ],
+        [
+          75.74447695414226,
+          295.2503662109375,
+          531.86181640625,
+          338.0903778076172
+        ],
+        [
+          75.74447695414226,
+          338.0903778076172,
+          531.86181640625,
+          398.9303741455078
+        ],
+        [
+          44.2457150050572,
+          398.9303741455078,
+          531.86181640625,
+          447.6696014404297
+        ],
+        [
+          44.2457150050572,
+          447.6696014404297,
+          531.86181640625,
+          570.4895629882812
+        ],
+        [
+          75.74447695414226,
+          460.2696075439453,
+          531.86181640625,
+          484.98960876464844
+        ],
+        [
+          75.74447695414226,
+          484.98960876464844,
+          531.86181640625,
+          545.82958984375
+        ],
+        [
+          75.74447695414226,
+          545.82958984375,
+          531.86181640625,
+          570.4895629882812
+        ]
+      ],
+      "header": [
+        "Column 1",
+        "Column 2",
+        "Column 3",
+        "Column 4",
+        "Column 5",
+        "Column 6",
+        "Column 7"
+      ],
+      "table_id": "96b479a96a484862271f572f",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "55cbd3f530b53aeae9d60822",
+      "page": 7,
+      "bbox": [
+        49.68003463745117,
+        618.9349365234375,
+        154.69227600097656,
+        630.9569702148438
+      ],
+      "kind": "paragraph",
+      "text": "Signature of the bidder",
+      "font_size": 9.960006713867188,
+      "bold": false,
+      "level": 0,
+      "section_id": "4cee7121eff468f770028ac1",
+      "section_path": [
+        "Annexure I",
+        "Contractor’s details: Mandatory Information (To be filled with supporting document)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "00eef196b3a795db17c0ef4c",
+      "page": 8,
+      "bbox": [
+        257.32958984375,
+        105.97325897216797,
+        355.9058837890625,
+        120.4576416015625
+      ],
+      "kind": "heading",
+      "text": "FINANCIAL BID",
+      "font_size": 12.000008583068848,
+      "bold": true,
+      "level": 2,
+      "section_id": "7183241e47068c35f3177d89",
+      "section_path": [
+        "Annexure I",
+        "FINANCIAL BID"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "2db3e0c4433ffb9b9ae79aa2",
+      "page": 8,
+      "bbox": [
+        506.7603759765625,
+        120.49459838867188,
+        563.0784912109375,
+        132.5166473388672
+      ],
+      "kind": "heading",
+      "text": "Schedule I",
+      "font_size": 9.960006713867188,
+      "bold": true,
+      "level": 1,
+      "section_id": "9b03c5a36dc9affb330bf518",
+      "section_path": [
+        "Schedule I"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "a4ef936fa2529b868446dfca",
+      "page": 8,
+      "bbox": [
+        132.86007690429688,
+        143.65609741210938,
+        563.3954467773438,
+        157.93972778320312
+      ],
+      "kind": "heading",
+      "text": "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 1,
+      "section_id": "9cb465880859bba351e03f5f",
+      "section_path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "97e5d67a69be0e1d0e924078",
+      "page": 8,
+      "bbox": [
+        225.29014587402344,
+        171.1341094970703,
+        387.81524658203125,
+        184.45974731445312
+      ],
+      "kind": "heading",
+      "text": "(Page No.1/ 3 to Schedule I)",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 2,
+      "section_id": "0b96e78fd5fcf7c5c7fc7564",
+      "section_path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+        "(Page No.1/ 3 to Schedule I)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "a84b40f61bf48205410dbee7",
+      "page": 8,
+      "bbox": [
+        44.256000709533694,
+        197.98494175502233,
+        537.143994140625,
+        826.7142769949777
+      ],
+      "kind": "table",
+      "text": "Sl No | Description | Qty | Unit | RATE in\nRs. | Amount\nin Rs.\n | Repair/ renovation of NIC Room, S & T Block III,\nDST with following provision: |  |  |  | \n | Civil Works |  |  |  | \n1 | Providing and fixing tiled false ceiling of approved\nmaterials (fire resistant Mineral Fiber – like Existing\nfalse ceiling boards in S & T Block II, DST) of size\n595x595 mm in true horizontal level, suspended on\ninter locking metal grid of hot dipped galvanized\nsteel sections (galvanized @ 120 grams/sqm, both\nside inclusive) consisting of main “T’ runner with\nsuitable spaced joints to get required length and of\nsize 24x38 mm made from 0.30 mm thick\n(minimum) sheet, spaced at 1200 mm center to\ncenter and cross “T” of size 24x25 mm made 0.30\nthick (minimum) sheet, 1200 mm long spaced\nbetween main “T” at 600 mm center to center to\nform grid of 1200x600 mm and secondary cross “T’\nof length 600 mm and size 24x25 mm made of\n0.30 mm thick (minimum) sheet to be interlocked\nat middle of the 1200x600 mm panel to form grids\nof 600x800 mm and wall angle of size 25x24x0.3\nmm and laying false ceiling tiles of approved\ntexture in the grid including, required\ncutting/making, opening for services like diffusers,\ngrills, light fittings, fixtures, smoke detectors etc.\nMain “T” runners to be suspended from ceiling\nusing GI slotted cleats of size 27x37x25x1.6 mm\nfixed to ceiling with 12.5 mm dia and 50 mm long\ndash .... 4 mm GI adjustable rods with galvanized\nbutterfly level clips of size 85x30x0.8 mm spaced at\n1200 mm center to center along main bottom\nexposed width of 24 mm of all T-section shall be\npre painted with polyester paint, all complete for all\nheights as per specifications, drawing and as\ndirected by DST | 40.00 | sqm | 1527.25 | 61090\n2 | 15 mm cement plaster on the rough side of single\nor hall brick wall of mix: |  |  |  | \n2.1 | 1.6 ( 1 cement: 6 fine sand) | 50.00 | Sqm | 185.20 | 9260\n3 | Providing & applying of plaster of Paris putty of\n2mm thickness over plastered surface to prepare\nthe surface even and smooth complete | 50.00 | Sqm | 118.70 | 5935\n4 | Wall painting with acrylic emulsion paint of\napproved brand and manufacture to give an even\nshade: |  |  |  | \n4.1 | Two or more coats on new works | 50.00 | Sqm | 84.45 | 4223",
+      "font_size": 0.0,
+      "bold": false,
+      "level": 0,
+      "section_id": "0b96e78fd5fcf7c5c7fc7564",
+      "section_path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+        "(Page No.1/ 3 to Schedule I)"
+      ],
+      "rows": [
+        [
+          "Sl No",
+          "Description",
+          "Qty",
+          "Unit",
+          "RATE in\nRs.",
+          "Amount\nin Rs."
+        ],
+        [
+          "",
+          "Repair/ renovation of NIC Room, S & T Block III,\nDST with following provision:",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Civil Works",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "1",
+          "Providing and fixing tiled false ceiling of approved\nmaterials (fire resistant Mineral Fiber – like Existing\nfalse ceiling boards in S & T Block II, DST) of size\n595x595 mm in true horizontal level, suspended on\ninter locking metal grid of hot dipped galvanized\nsteel sections (galvanized @ 120 grams/sqm, both\nside inclusive) consisting of main “T’ runner with\nsuitable spaced joints to get required length and of\nsize 24x38 mm made from 0.30 mm thick\n(minimum) sheet, spaced at 1200 mm center to\ncenter and cross “T” of size 24x25 mm made 0.30\nthick (minimum) sheet, 1200 mm long spaced\nbetween main “T” at 600 mm center to center to\nform grid of 1200x600 mm and secondary cross “T’\nof length 600 mm and size 24x25 mm made of\n0.30 mm thick (minimum) sheet to be interlocked\nat middle of the 1200x600 mm panel to form grids\nof 600x800 mm and wall angle of size 25x24x0.3\nmm and laying false ceiling tiles of approved\ntexture in the grid including, required\ncutting/making, opening for services like diffusers,\ngrills, light fittings, fixtures, smoke detectors etc.\nMain “T” runners to be suspended from ceiling\nusing GI slotted cleats of size 27x37x25x1.6 mm\nfixed to ceiling with 12.5 mm dia and 50 mm long\ndash .... 4 mm GI adjustable rods with galvanized\nbutterfly level clips of size 85x30x0.8 mm spaced at\n1200 mm center to center along main bottom\nexposed width of 24 mm of all T-section shall be\npre painted with polyester paint, all complete for all\nheights as per specifications, drawing and as\ndirected by DST",
+          "40.00",
+          "sqm",
+          "1527.25",
+          "61090"
+        ],
+        [
+          "2",
+          "15 mm cement plaster on the rough side of single\nor hall brick wall of mix:",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "2.1",
+          "1.6 ( 1 cement: 6 fine sand)",
+          "50.00",
+          "Sqm",
+          "185.20",
+          "9260"
+        ],
+        [
+          "3",
+          "Providing & applying of plaster of Paris putty of\n2mm thickness over plastered surface to prepare\nthe surface even and smooth complete",
+          "50.00",
+          "Sqm",
+          "118.70",
+          "5935"
+        ],
+        [
+          "4",
+          "Wall painting with acrylic emulsion paint of\napproved brand and manufacture to give an even\nshade:",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "4.1",
+          "Two or more coats on new works",
+          "50.00",
+          "Sqm",
+          "84.45",
+          "4223"
+        ]
+      ],
+      "row_boxes": [
+        [
+          44.256000709533694,
+          197.98494175502233,
+          537.143994140625,
+          225.13922119140625
+        ],
+        [
+          44.256000709533694,
+          225.13922119140625,
+          537.143994140625,
+          252.13922119140625
+        ],
+        [
+          44.256000709533694,
+          252.13922119140625,
+          537.143994140625,
+          265.939208984375
+        ],
+        [
+          44.256000709533694,
+          265.939208984375,
+          537.143994140625,
+          691.4202880859375
+        ],
+        [
+          44.256000709533694,
+          691.4202880859375,
+          537.143994140625,
+          718.4203186035156
+        ],
+        [
+          44.256000709533694,
+          718.4203186035156,
+          537.143994140625,
+          732.2203063964844
+        ],
+        [
+          44.256000709533694,
+          732.2203063964844,
+          537.143994140625,
+          772.5355224609375
+        ],
+        [
+          44.256000709533694,
+          772.5355224609375,
+          537.143994140625,
+          812.8800048828125
+        ],
+        [
+          44.256000709533694,
+          812.8800048828125,
+          537.143994140625,
+          826.7142769949777
+        ]
+      ],
+      "header": [
+        "Sl No",
+        "Description",
+        "Qty",
+        "Unit",
+        "RATE in\nRs.",
+        "Amount\nin Rs."
+      ],
+      "table_id": "a84b40f61bf48205410dbee7",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "4fad5b5df65bcb97517d702d",
+      "page": 9,
+      "bbox": [
+        44.22000074386597,
+        12.085710797991071,
+        536.7299919128418,
+        25.954267229352677
+      ],
+      "kind": "table",
+      "text": " | Total |  |  |  | 76285",
+      "font_size": 0.0,
+      "bold": false,
+      "level": 0,
+      "section_id": "0b96e78fd5fcf7c5c7fc7564",
+      "section_path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+        "(Page No.1/ 3 to Schedule I)"
+      ],
+      "rows": [
+        [
+          "",
+          "Total",
+          "",
+          "",
+          "",
+          "76285"
+        ]
+      ],
+      "row_boxes": [
+        [
+          44.22000074386597,
+          12.085710797991071,
+          536.7299919128418,
+          25.954267229352677
+        ]
+      ],
+      "header": [
+        "Column 1",
+        "Column 2",
+        "Column 3",
+        "Column 4",
+        "Column 5",
+        "Column 6"
+      ],
+      "table_id": "4fad5b5df65bcb97517d702d",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "d0b42b34b42589f995c5502a",
+      "page": 9,
+      "bbox": [
+        49.68003463745117,
+        65.87403869628906,
+        222.3798828125,
+        79.19966888427734
+      ],
+      "kind": "paragraph",
+      "text": "Signature with stamp of the bidder",
+      "font_size": 11.040007591247559,
+      "bold": false,
+      "level": 0,
+      "section_id": "0b96e78fd5fcf7c5c7fc7564",
+      "section_path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+        "(Page No.1/ 3 to Schedule I)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "fd6e8a411cd3df9a2ff59641",
+      "page": 9,
+      "bbox": [
+        225.29017639160156,
+        132.25416564941406,
+        387.8152770996094,
+        145.57980346679688
+      ],
+      "kind": "heading",
+      "text": "(Page No.2/ 3 to Schedule I)",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 2,
+      "section_id": "9a5aadabf3c8d9914fc84f9a",
+      "section_path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+        "(Page No.2/ 3 to Schedule I)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "ae1560f2e7d4c1ab4c3684b8",
+      "page": 9,
+      "bbox": [
+        44.22000074386597,
+        159.22493198939733,
+        536.7299919128418,
+        533.6238839285714
+      ],
+      "kind": "table",
+      "text": "Sl No | Description | Qty | Unit | RATE in\nRs. | Amount in\nRs.\n | B/F Total Page No.1/3 of Schedule 1 |  |  |  | 76285\n5 | Providing and fixing APP (Atactic Polypropylene\nPolymer) modified prefabricated five layer 2 mm\nthick water proofing membrane, black finished\nreinforced with glass fibre matt consisting of a coat\nof bitumen primer for bitumen membrane @ 0.40\nlitre/sqm by the same membrane manufacture of\ndensity at 25°C, 0.87 - 0.89 kg/ litre and viscosity\n70 - 160 cps. Over the primer coat the layer of\nmembrane shall be laid using Butane torch and\nsealing all joints etc., and preparing the surface\ncomplete. The vital physical and chemical\nparameters of the membrane shall be as under:\nJoint strength in longitudinal and transverse\ndirection at 23°C as 350/300 N/ 5 cm. Tear\nstrength in longitudinal and transverse direction as\n60/80N. Softening point of membrane not less than\n150°C. Cold flexibilities shall be up to -2°C when\ntested in accordance with ASTM, D - 5147. The\nlaying of membrane shall be got done through the\nauthorised applicator of the manufacture of\nmembrane. |  |  |  | \n5.1 | 2mm (for corrugated roof sheets) All projected bolt\nheads to be cut before execution of work. | 500 | sqm | 282.95 | 141475\n |  |  |  |  | 2,17,760/-",
+      "font_size": 0.0,
+      "bold": false,
+      "level": 0,
+      "section_id": "9a5aadabf3c8d9914fc84f9a",
+      "section_path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+        "(Page No.2/ 3 to Schedule I)"
+      ],
+      "rows": [
+        [
+          "Sl No",
+          "Description",
+          "Qty",
+          "Unit",
+          "RATE in\nRs.",
+          "Amount in\nRs."
+        ],
+        [
+          "",
+          "B/F Total Page No.1/3 of Schedule 1",
+          "",
+          "",
+          "",
+          "76285"
+        ],
+        [
+          "5",
+          "Providing and fixing APP (Atactic Polypropylene\nPolymer) modified prefabricated five layer 2 mm\nthick water proofing membrane, black finished\nreinforced with glass fibre matt consisting of a coat\nof bitumen primer for bitumen membrane @ 0.40\nlitre/sqm by the same membrane manufacture of\ndensity at 25°C, 0.87 - 0.89 kg/ litre and viscosity\n70 - 160 cps. Over the primer coat the layer of\nmembrane shall be laid using Butane torch and\nsealing all joints etc., and preparing the surface\ncomplete. The vital physical and chemical\nparameters of the membrane shall be as under:\nJoint strength in longitudinal and transverse\ndirection at 23°C as 350/300 N/ 5 cm. Tear\nstrength in longitudinal and transverse direction as\n60/80N. Softening point of membrane not less than\n150°C. Cold flexibilities shall be up to -2°C when\ntested in accordance with ASTM, D - 5147. The\nlaying of membrane shall be got done through the\nauthorised applicator of the manufacture of\nmembrane.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "5.1",
+          "2mm (for corrugated roof sheets) All projected bolt\nheads to be cut before execution of work.",
+          "500",
+          "sqm",
+          "282.95",
+          "141475"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "2,17,760/-"
+        ]
+      ],
+      "row_boxes": [
+        [
+          44.22000074386597,
+          159.22493198939733,
+          536.7299919128418,
+          186.25921630859375
+        ],
+        [
+          44.22000074386597,
+          186.25921630859375,
+          536.7299919128418,
+          213.37921142578125
+        ],
+        [
+          44.22000074386597,
+          213.37921142578125,
+          536.7299919128418,
+          492.6696014404297
+        ],
+        [
+          44.22000074386597,
+          492.6696014404297,
+          536.7299919128418,
+          519.7895812988281
+        ],
+        [
+          44.22000074386597,
+          519.7895812988281,
+          536.7299919128418,
+          533.6238839285714
+        ]
+      ],
+      "header": [
+        "Sl No",
+        "Description",
+        "Qty",
+        "Unit",
+        "RATE in\nRs.",
+        "Amount in\nRs."
+      ],
+      "table_id": "ae1560f2e7d4c1ab4c3684b8",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "348588375db4652af511d04a",
+      "page": 9,
+      "bbox": [
+        49.68003463745117,
+        533.704345703125,
+        222.37991333007812,
+        547.0299682617188
+      ],
+      "kind": "paragraph",
+      "text": "Signature with stamp of the bidder",
+      "font_size": 11.040007591247559,
+      "bold": false,
+      "level": 0,
+      "section_id": "9a5aadabf3c8d9914fc84f9a",
+      "section_path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+        "(Page No.2/ 3 to Schedule I)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "12f9d901dd633bedb59ffbdb",
+      "page": 10,
+      "bbox": [
+        225.28956604003906,
+        26.274059295654297,
+        387.8146667480469,
+        39.599693298339844
+      ],
+      "kind": "heading",
+      "text": "(Page No.3/ 3 to Schedule I)",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 2,
+      "section_id": "dd1fbcdc1557a5a50ec40c92",
+      "section_path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+        "(Page No.3/ 3 to Schedule I)"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "efb965283c427e42d6aaf687",
+      "page": 10,
+      "bbox": [
+        44.27142926624843,
+        53.12571498325893,
+        536.648556300572,
+        597.943865094866
+      ],
+      "kind": "table",
+      "text": " | B/F Total Page No.2/3 of Schedule 1 |  |  |  | 2,17,760/-\n | Repair/ renovation of NIC Room, S & T Block III,\nDST with following provision: |  |  |  | \n | Electrical Works |  |  |  | \n6 | Dismantling of electrical installation | 1 | Job | 1500 | 1500\n7 | Wiring for light point Group C | 18 | Pts | 1003 | 18054\n8 | Wiring for circuit 3x1.5 sq. mm Copper wire | 50 | Mtr | 175 | 8750\n9 | Wiring for circuit wiring with 6x 6 sq. mm copper\nwire | 60 | Mtr | 365 | 21900\n10 | Wiring for circuit 6x1.5 sq. mm Copper wire | 10 | Mtr | 237 | 2370\n11 | Wiring for circuit 3x4 sq. mm Copper wire | 100 | Mtr | 231 | 23100\n12 | Writing for circuit 3x4 sq. mm Copper wire | 150 | Mtr | 365 | 54750\n13 | Supplying and fixing GI box with modular plate and\n15/16 Amps modular socket | 5 | Nos | 395 | 1975\n14 | Supply and fixing following size/modules, GI box\nalong with modular base & cover plate |  |  |  | \n14.1 | 12 Module (200 mm x 150 mm) | 14 | Nos | 334 | 4676\n15 | Supplying and fixing following modular\nswitch/socket on the existing modular plate |  |  |  | \n15.1 | 15/16 Amp socket outlet | 56 | Nos | 111 | 6216\n16 | 6 pin 15/16 Amp socket outlet | 56 | Nos | 150 | 8400\n17 | Supply & fixing 20 Amp socket outlet | 6 | Nos | 954 | 5724\n18 | Supply and fixing 1x18 watt fluorescent LED tube\nfitting | 16 | Nos | 1100 | 17600\n19 | Supply & fixing down light etc as reqd. (LED) | 6 | Nos | 2500 | 15000\n20 | Supply & fixing TPNMCBDB 4M way (4+12) | 1 | Nos | 2175 | 2175\n21 | Supply & fixing SPMCB | 26 | Nos | 169 | 4394\n22 | Supply & fixing FPMCB-63 Amp | 1 | Nos | 1700 | 1700\n23 | Wiring for circuit / Submain-4x16 sq. mm + 2x16\nsq. mm | 10 | Mtr | 1177 | 11770\n24 | Supply & fixing TPN sheet steel enclose on surface\nwith 63 Amp TPNMCB | 1 | Nos | 2500 | 2500\n | Grand Total |  |  |  | 4,30,314/-\n | Rate quoted % above or below |  |  |  | \n | Total amount after considering % rate above/\nbelow. |  |  |  | ",
+      "font_size": 0.0,
+      "bold": false,
+      "level": 0,
+      "section_id": "dd1fbcdc1557a5a50ec40c92",
+      "section_path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+        "(Page No.3/ 3 to Schedule I)"
+      ],
+      "rows": [
+        [
+          "",
+          "B/F Total Page No.2/3 of Schedule 1",
+          "",
+          "",
+          "",
+          "2,17,760/-"
+        ],
+        [
+          "",
+          "Repair/ renovation of NIC Room, S & T Block III,\nDST with following provision:",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Electrical Works",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "6",
+          "Dismantling of electrical installation",
+          "1",
+          "Job",
+          "1500",
+          "1500"
+        ],
+        [
+          "7",
+          "Wiring for light point Group C",
+          "18",
+          "Pts",
+          "1003",
+          "18054"
+        ],
+        [
+          "8",
+          "Wiring for circuit 3x1.5 sq. mm Copper wire",
+          "50",
+          "Mtr",
+          "175",
+          "8750"
+        ],
+        [
+          "9",
+          "Wiring for circuit wiring with 6x 6 sq. mm copper\nwire",
+          "60",
+          "Mtr",
+          "365",
+          "21900"
+        ],
+        [
+          "10",
+          "Wiring for circuit 6x1.5 sq. mm Copper wire",
+          "10",
+          "Mtr",
+          "237",
+          "2370"
+        ],
+        [
+          "11",
+          "Wiring for circuit 3x4 sq. mm Copper wire",
+          "100",
+          "Mtr",
+          "231",
+          "23100"
+        ],
+        [
+          "12",
+          "Writing for circuit 3x4 sq. mm Copper wire",
+          "150",
+          "Mtr",
+          "365",
+          "54750"
+        ],
+        [
+          "13",
+          "Supplying and fixing GI box with modular plate and\n15/16 Amps modular socket",
+          "5",
+          "Nos",
+          "395",
+          "1975"
+        ],
+        [
+          "14",
+          "Supply and fixing following size/modules, GI box\nalong with modular base & cover plate",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "14.1",
+          "12 Module (200 mm x 150 mm)",
+          "14",
+          "Nos",
+          "334",
+          "4676"
+        ],
+        [
+          "15",
+          "Supplying and fixing following modular\nswitch/socket on the existing modular plate",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "15.1",
+          "15/16 Amp socket outlet",
+          "56",
+          "Nos",
+          "111",
+          "6216"
+        ],
+        [
+          "16",
+          "6 pin 15/16 Amp socket outlet",
+          "56",
+          "Nos",
+          "150",
+          "8400"
+        ],
+        [
+          "17",
+          "Supply & fixing 20 Amp socket outlet",
+          "6",
+          "Nos",
+          "954",
+          "5724"
+        ],
+        [
+          "18",
+          "Supply and fixing 1x18 watt fluorescent LED tube\nfitting",
+          "16",
+          "Nos",
+          "1100",
+          "17600"
+        ],
+        [
+          "19",
+          "Supply & fixing down light etc as reqd. (LED)",
+          "6",
+          "Nos",
+          "2500",
+          "15000"
+        ],
+        [
+          "20",
+          "Supply & fixing TPNMCBDB 4M way (4+12)",
+          "1",
+          "Nos",
+          "2175",
+          "2175"
+        ],
+        [
+          "21",
+          "Supply & fixing SPMCB",
+          "26",
+          "Nos",
+          "169",
+          "4394"
+        ],
+        [
+          "22",
+          "Supply & fixing FPMCB-63 Amp",
+          "1",
+          "Nos",
+          "1700",
+          "1700"
+        ],
+        [
+          "23",
+          "Wiring for circuit / Submain-4x16 sq. mm + 2x16\nsq. mm",
+          "10",
+          "Mtr",
+          "1177",
+          "11770"
+        ],
+        [
+          "24",
+          "Supply & fixing TPN sheet steel enclose on surface\nwith 63 Amp TPNMCB",
+          "1",
+          "Nos",
+          "2500",
+          "2500"
+        ],
+        [
+          "",
+          "Grand Total",
+          "",
+          "",
+          "",
+          "4,30,314/-"
+        ],
+        [
+          "",
+          "Rate quoted % above or below",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Total amount after considering % rate above/\nbelow.",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "row_boxes": [
+        [
+          44.27142926624843,
+          53.12571498325893,
+          536.648556300572,
+          80.27999877929688
+        ],
+        [
+          44.27142926624843,
+          80.27999877929688,
+          536.648556300572,
+          120.61920166015625
+        ],
+        [
+          44.27142926624843,
+          120.61920166015625,
+          536.648556300572,
+          134.22207641601562
+        ],
+        [
+          44.27142926624843,
+          134.22207641601562,
+          536.648556300572,
+          148.09921264648438
+        ],
+        [
+          44.27142926624843,
+          148.09921264648438,
+          536.648556300572,
+          161.89923095703125
+        ],
+        [
+          44.27142926624843,
+          161.89923095703125,
+          536.648556300572,
+          175.69921875
+        ],
+        [
+          44.27142926624843,
+          175.69921875,
+          536.648556300572,
+          202.69921875
+        ],
+        [
+          44.27142926624843,
+          202.69921875,
+          536.648556300572,
+          216.49920654296875
+        ],
+        [
+          44.27142926624843,
+          216.49920654296875,
+          536.648556300572,
+          230.29922485351562
+        ],
+        [
+          44.27142926624843,
+          230.29922485351562,
+          536.648556300572,
+          244.09921264648438
+        ],
+        [
+          44.27142926624843,
+          244.09921264648438,
+          536.648556300572,
+          271.13037109375
+        ],
+        [
+          44.27142926624843,
+          271.13037109375,
+          536.648556300572,
+          298.2503662109375
+        ],
+        [
+          44.27142926624843,
+          298.2503662109375,
+          536.648556300572,
+          312.0503845214844
+        ],
+        [
+          44.27142926624843,
+          312.0503845214844,
+          536.648556300572,
+          339.0503845214844
+        ],
+        [
+          44.27142926624843,
+          339.0503845214844,
+          536.648556300572,
+          352.8503875732422
+        ],
+        [
+          44.27142926624843,
+          352.8503875732422,
+          536.648556300572,
+          366.65037536621094
+        ],
+        [
+          44.27142926624843,
+          366.65037536621094,
+          536.648556300572,
+          380.33038330078125
+        ],
+        [
+          44.27142926624843,
+          380.33038330078125,
+          536.648556300572,
+          407.45037841796875
+        ],
+        [
+          44.27142926624843,
+          407.45037841796875,
+          536.648556300572,
+          421.25038146972656
+        ],
+        [
+          44.27142926624843,
+          421.25038146972656,
+          536.648556300572,
+          435.0503845214844
+        ],
+        [
+          44.27142926624843,
+          435.0503845214844,
+          536.648556300572,
+          448.7496032714844
+        ],
+        [
+          44.27142926624843,
+          448.7496032714844,
+          536.648556300572,
+          462.5496063232422
+        ],
+        [
+          44.27142926624843,
+          462.5496063232422,
+          536.648556300572,
+          489.6696014404297
+        ],
+        [
+          44.27142926624843,
+          489.6696014404297,
+          536.648556300572,
+          516.6695861816406
+        ],
+        [
+          44.27142926624843,
+          516.6695861816406,
+          536.648556300572,
+          530.4696044921875
+        ],
+        [
+          44.27142926624843,
+          530.4696044921875,
+          536.648556300572,
+          557.4696044921875
+        ],
+        [
+          44.27142926624843,
+          557.4696044921875,
+          536.648556300572,
+          597.943865094866
+        ]
+      ],
+      "header": [
+        "Column 1",
+        "Column 2",
+        "Column 3",
+        "Column 4",
+        "Column 5",
+        "Column 6"
+      ],
+      "table_id": "efb965283c427e42d6aaf687",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    },
+    {
+      "id": "b8d83fe5309fb36891d83871",
+      "page": 10,
+      "bbox": [
+        49.68003463745117,
+        624.5744018554688,
+        246.4041748046875,
+        730.7800903320312
+      ],
+      "kind": "heading",
+      "text": "Name of the firm: -\nAddress of the firm: -\nSignature with stamp of the bidder",
+      "font_size": 11.040007591247559,
+      "bold": true,
+      "level": 2,
+      "section_id": "1988e9d469bfefe4971d87cb",
+      "section_path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+        "Name of the firm: -\nAddress of the firm: -\nSignature with stamp of the bidder"
+      ],
+      "rows": [],
+      "row_boxes": [],
+      "header": [],
+      "table_id": "",
+      "extraction": "native",
+      "confidence": 1.0,
+      "excluded": false
+    }
+  ],
+  "sections": [
+    {
+      "id": "be6c338a8831e4f6f7da8dd0",
+      "title": "Composite Tender Document for Civil and Electrical Works",
+      "level": 0,
+      "parent_id": null,
+      "page": 1,
+      "path": []
+    },
+    {
+      "id": "f6f9a23de2e6bfa45fe6aaa9",
+      "title": "Tender Enquiry No.D-13023/ 1/ 3/ 2015 Admin II (B)\nDate: 17th May, 2018",
+      "level": 2,
+      "parent_id": "be6c338a8831e4f6f7da8dd0",
+      "page": 1,
+      "path": [
+        "Tender Enquiry No.D-13023/ 1/ 3/ 2015 Admin II (B)\nDate: 17th May, 2018"
+      ]
+    },
+    {
+      "id": "32f0e026c441f2095b7af1a5",
+      "title": "Technology Bhavan, New Delhi -16",
+      "level": 2,
+      "parent_id": "be6c338a8831e4f6f7da8dd0",
+      "page": 1,
+      "path": [
+        "Technology Bhavan, New Delhi -16"
+      ]
+    },
+    {
+      "id": "513a64a46d7d769285bde0f2",
+      "title": "(Composite work)",
+      "level": 2,
+      "parent_id": "be6c338a8831e4f6f7da8dd0",
+      "page": 1,
+      "path": [
+        "(Composite work)"
+      ]
+    },
+    {
+      "id": "7e204c7fed1d5d0964f4c058",
+      "title": "Signature with stamp of the bidder",
+      "level": 2,
+      "parent_id": "be6c338a8831e4f6f7da8dd0",
+      "page": 1,
+      "path": [
+        "Signature with stamp of the bidder"
+      ]
+    },
+    {
+      "id": "63b34943ed1a4e8619c33413",
+      "title": "Annexure I",
+      "level": 1,
+      "parent_id": "be6c338a8831e4f6f7da8dd0",
+      "page": 6,
+      "path": [
+        "Annexure I"
+      ]
+    },
+    {
+      "id": "0f7897b62cf7e48fcb51babc",
+      "title": "Department of Science & Technology\nAdmin II (B) Section",
+      "level": 2,
+      "parent_id": "63b34943ed1a4e8619c33413",
+      "page": 6,
+      "path": [
+        "Annexure I",
+        "Department of Science & Technology\nAdmin II (B) Section"
+      ]
+    },
+    {
+      "id": "4cee7121eff468f770028ac1",
+      "title": "Contractor’s details: Mandatory Information (To be filled with supporting document)",
+      "level": 2,
+      "parent_id": "63b34943ed1a4e8619c33413",
+      "page": 6,
+      "path": [
+        "Annexure I",
+        "Contractor’s details: Mandatory Information (To be filled with supporting document)"
+      ]
+    },
+    {
+      "id": "7183241e47068c35f3177d89",
+      "title": "FINANCIAL BID",
+      "level": 2,
+      "parent_id": "63b34943ed1a4e8619c33413",
+      "page": 8,
+      "path": [
+        "Annexure I",
+        "FINANCIAL BID"
+      ]
+    },
+    {
+      "id": "9b03c5a36dc9affb330bf518",
+      "title": "Schedule I",
+      "level": 1,
+      "parent_id": "be6c338a8831e4f6f7da8dd0",
+      "page": 8,
+      "path": [
+        "Schedule I"
+      ]
+    },
+    {
+      "id": "9cb465880859bba351e03f5f",
+      "title": "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+      "level": 1,
+      "parent_id": "be6c338a8831e4f6f7da8dd0",
+      "page": 8,
+      "path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018"
+      ]
+    },
+    {
+      "id": "0b96e78fd5fcf7c5c7fc7564",
+      "title": "(Page No.1/ 3 to Schedule I)",
+      "level": 2,
+      "parent_id": "9cb465880859bba351e03f5f",
+      "page": 8,
+      "path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+        "(Page No.1/ 3 to Schedule I)"
+      ]
+    },
+    {
+      "id": "9a5aadabf3c8d9914fc84f9a",
+      "title": "(Page No.2/ 3 to Schedule I)",
+      "level": 2,
+      "parent_id": "9cb465880859bba351e03f5f",
+      "page": 9,
+      "path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+        "(Page No.2/ 3 to Schedule I)"
+      ]
+    },
+    {
+      "id": "dd1fbcdc1557a5a50ec40c92",
+      "title": "(Page No.3/ 3 to Schedule I)",
+      "level": 2,
+      "parent_id": "9cb465880859bba351e03f5f",
+      "page": 10,
+      "path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+        "(Page No.3/ 3 to Schedule I)"
+      ]
+    },
+    {
+      "id": "1988e9d469bfefe4971d87cb",
+      "title": "Name of the firm: -\nAddress of the firm: -\nSignature with stamp of the bidder",
+      "level": 2,
+      "parent_id": "9cb465880859bba351e03f5f",
+      "page": 10,
+      "path": [
+        "Schedule I to T E No.D-13023/ 1/ 3/ 2015 Admin II (B) dated 15th May, 2018",
+        "Name of the firm: -\nAddress of the firm: -\nSignature with stamp of the bidder"
+      ]
+    }
+  ],
+  "quality": [
+    {
+      "page": 1,
+      "method": "native",
+      "characters": 2231,
+      "tables": 0,
+      "warnings": [],
+      "image_regions": [],
+      "ocr_mean_confidence": null
+    },
+    {
+      "page": 2,
+      "method": "native",
+      "characters": 2889,
+      "tables": 1,
+      "warnings": [],
+      "image_regions": [],
+      "ocr_mean_confidence": null
+    },
+    {
+      "page": 3,
+      "method": "native",
+      "characters": 2883,
+      "tables": 1,
+      "warnings": [],
+      "image_regions": [],
+      "ocr_mean_confidence": null
+    },
+    {
+      "page": 4,
+      "method": "native",
+      "characters": 3688,
+      "tables": 1,
+      "warnings": [],
+      "image_regions": [],
+      "ocr_mean_confidence": null
+    },
+    {
+      "page": 5,
+      "method": "native",
+      "characters": 3558,
+      "tables": 1,
+      "warnings": [],
+      "image_regions": [],
+      "ocr_mean_confidence": null
+    },
+    {
+      "page": 6,
+      "method": "native",
+      "characters": 1928,
+      "tables": 1,
+      "warnings": [],
+      "image_regions": [],
+      "ocr_mean_confidence": null
+    },
+    {
+      "page": 7,
+      "method": "native",
+      "characters": 1566,
+      "tables": 1,
+      "warnings": [],
+      "image_regions": [],
+      "ocr_mean_confidence": null
+    },
+    {
+      "page": 8,
+      "method": "native",
+      "characters": 2372,
+      "tables": 1,
+      "warnings": [],
+      "image_regions": [],
+      "ocr_mean_confidence": null
+    },
+    {
+      "page": 9,
+      "method": "native",
+      "characters": 1377,
+      "tables": 2,
+      "warnings": [],
+      "image_regions": [],
+      "ocr_mean_confidence": null
+    },
+    {
+      "page": 10,
+      "method": "native",
+      "characters": 2016,
+      "tables": 1,
+      "warnings": [],
+      "image_regions": [],
+      "ocr_mean_confidence": null
+    }
+  ],
+  "metadata": {
+    "id": "electrical_mechanical_03",
+    "category": "electrical_mechanical",
+    "title": "Composite Tender Document for Civil and Electrical Works",
+    "organization": "Department of Science and Technology",
+    "source_url": "https://dst.gov.in/",
+    "download_url": "https://dst.gov.in/sites/default/files/Composite-Tender-Document-NIC-TIFAC.pdf",
+    "filename": "electrical_mechanical/electrical_mechanical_03_tifac_composite_works.pdf",
+    "file_size_bytes": 193588,
+    "sha256": "ba32c9e72aa9820a7dd66419e56a24e283bd866ebc0426bc548ff18e1eb2e99f",
+    "page_count": 10,
+    "pdf_type": "digital",
+    "has_tables": true,
+    "has_images": true,
+    "has_numbered_clauses": true,
+    "has_annexures": true,
+    "notes": "existing; extracted_characters=24915; image_count=10"
+  }
+}

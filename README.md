@@ -55,6 +55,8 @@ The selected output directory contains:
 | `index.sqlite` | Transactional documents, sections, chunks, full-text index and optional dense vectors |
 | `ingestion_report.json` | Per-document counts, page warnings, unread pages and failures |
 
+During ingestion/reindexing, the CLI prints timing and LLM-oriented sizing telemetry after every PDF and a final total: elapsed seconds, chunks per second, estimated body-token total and average/minimum/maximum chunk size, plus estimated context tokens including the hierarchy prefix. The same metrics are stored under each document's `processing` field in the report. Token values are conservative estimates; use the target model tokenizer for final prompt budgeting.
+
 ```python
 from semantic_chunker import PDFParser, StructuralChunker, SearchIndex
 

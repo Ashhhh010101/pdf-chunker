@@ -14,6 +14,35 @@ from .parser import PDFParser
 from .models import Document
 
 
+def chunk_metrics(chunks, elapsed_seconds: float) -> dict:
+    """Report conservative LLM-facing token estimates, plus throughput."""
+    body = [c.token_count for c in chunks]
+    context = [c.token_count + len((c.context or "").split()) for c in chunks]
+    total = sum(body)
+    return {
+        "elapsed_seconds": round(elapsed_seconds, 3),
+        "chunks_per_second": round(len(chunks) / elapsed_seconds, 2) if elapsed_seconds else None,
+        "estimated_body_tokens": total,
+        "estimated_context_tokens": sum(context),
+        "avg_body_tokens_per_chunk": round(total / len(body), 2) if body else 0,
+        "min_body_tokens_per_chunk": min(body) if body else 0,
+        "max_body_tokens_per_chunk": max(body) if body else 0,
+        "avg_context_tokens_per_chunk": round(sum(context) / len(context), 2) if context else 0,
+    }
+
+
+def print_chunk_metrics(metrics, prefix="  processing"):
+    print(
+        f"{prefix}: {metrics['elapsed_seconds']:.2f}s | "
+        f"{metrics['chunks_per_second'] or 0:.2f} chunks/s | "
+        f"tokens body total/avg/min/max={metrics['estimated_body_tokens']}/"
+        f"{metrics['avg_body_tokens_per_chunk']}/{metrics['min_body_tokens_per_chunk']}/"
+        f"{metrics['max_body_tokens_per_chunk']} | "
+        f"LLM context est. total/avg={metrics['estimated_context_tokens']}/"
+        f"{metrics['avg_context_tokens_per_chunk']}",
+        file=sys.stderr, flush=True)
+
+
 def write_json(path, value):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -50,6 +79,7 @@ def ingest(args):
     with SearchIndex(output / "index.sqlite", embedder) as index:
         for i, path in enumerate(files, 1):
             print(f"[{i}/{len(files)}] {path.name}", file=sys.stderr, flush=True)
+            document_started = time.perf_counter()
             try:
                 doc = parser.parse(path, metadata.get(str(path), {"category": path.parent.name}))
                 chunks = chunker.chunk(doc)
@@ -61,13 +91,16 @@ def ingest(args):
                 temp.write_text("".join(json.dumps(asdict(c), ensure_ascii=False) + "\n" for c in chunks), encoding="utf-8")
                 temp.replace(chunk_path)
                 flagged = [q for q in doc.quality if q["warnings"]]
+                metrics = chunk_metrics(chunks, time.perf_counter() - document_started)
                 entry = {"source": str(path), "id": doc.id, "pages": doc.page_count,
                          "elements": len(doc.elements), "sections": len(doc.sections), "chunks": len(chunks),
                          "tables": sum(e.kind == "table" for e in doc.elements),
                          "ocr_pages": sum(q["method"] != "native" for q in doc.quality), "flagged_pages": flagged,
-                         "unread_pages": [q["page"] for q in doc.quality if "needs_ocr" in q["warnings"]]}
+                         "unread_pages": [q["page"] for q in doc.quality if "needs_ocr" in q["warnings"]],
+                         "processing": metrics}
                 report["documents"].append(entry)
                 print(f"  {len(chunks)} chunks, {entry['tables']} tables, {len(flagged)} flagged pages", file=sys.stderr, flush=True)
+                print_chunk_metrics(metrics)
             except Exception as exc:
                 report["failures"].append({"source": str(path), "error": f"{type(exc).__name__}: {exc}"})
                 print(f"  FAILED: {exc}", file=sys.stderr, flush=True)
@@ -75,6 +108,16 @@ def ingest(args):
             report["index"] = index.stats()
             write_json(output / "ingestion_report.json", report)
     print(json.dumps({"report": str(output / "ingestion_report.json"), **report["index"]}, indent=2))
+    all_metrics = [d["processing"] for d in report["documents"] if "processing" in d]
+    if all_metrics:
+        total_time = sum(m["elapsed_seconds"] for m in all_metrics)
+        total_chunks = sum(round(m["chunks_per_second"] * m["elapsed_seconds"]) for m in all_metrics)
+        total_tokens = sum(m["estimated_body_tokens"] for m in all_metrics)
+        total_context = sum(m["estimated_context_tokens"] for m in all_metrics)
+        print(f"total processing: {total_time:.2f}s | {total_chunks / total_time if total_time else 0:.2f} chunks/s | "
+              f"tokens body total/avg={total_tokens}/{total_tokens / total_chunks if total_chunks else 0:.2f} | "
+              f"LLM context est. total/avg={total_context}/{total_context / total_chunks if total_chunks else 0:.2f}",
+              file=sys.stderr, flush=True)
     incomplete = any(d["unread_pages"] for d in report["documents"])
     return 2 if report["failures"] or incomplete and args.strict else 0
 
@@ -118,6 +161,7 @@ def reindex(args):
         for i, path in enumerate(files, 1):
             doc = Document.from_dict(json.loads(path.read_text(encoding="utf-8")))
             print(f"[{i}/{len(files)}] {Path(doc.source).name}", file=sys.stderr, flush=True)
+            document_started = time.perf_counter()
             if args.refresh_structure:
                 # Refresh curated title/source metadata along with the hierarchy when available.
                 source_path = Path(doc.source)
@@ -138,10 +182,19 @@ def reindex(args):
             temporary = target.with_suffix(".jsonl.tmp")
             temporary.write_text("".join(json.dumps(c.to_dict(), ensure_ascii=False) + "\n" for c in chunks), encoding="utf-8")
             temporary.replace(target)
-            report["documents"].append({"id": doc.id, "source": doc.source, "chunks": len(chunks)})
+            metrics = chunk_metrics(chunks, time.perf_counter() - document_started)
+            report["documents"].append({"id": doc.id, "source": doc.source, "chunks": len(chunks), "processing": metrics})
+            print_chunk_metrics(metrics)
             report["index"] = index.stats()
             write_json(output / "reindex_report.json", report)
     print(json.dumps(report["index"], indent=2))
+    all_metrics = [d["processing"] for d in report["documents"]]
+    if all_metrics:
+        total_time = sum(m["elapsed_seconds"] for m in all_metrics)
+        total_chunks = sum(round(m["chunks_per_second"] * m["elapsed_seconds"]) for m in all_metrics)
+        print(f"total processing: {total_time:.2f}s | {total_chunks / total_time if total_time else 0:.2f} chunks/s | "
+              f"estimated body tokens={sum(m['estimated_body_tokens'] for m in all_metrics)}",
+              file=sys.stderr, flush=True)
     return 0
 
 
