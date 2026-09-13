@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 from dataclasses import asdict
 import json
+import re
 import sqlite3
 from pathlib import Path
 import sys
@@ -212,12 +213,35 @@ def search(args):
     return 0
 
 
+def _normalized_answer_text(value):
+    """Normalize punctuation and spacing without weakening numeric comparisons."""
+    return " ".join(re.findall(r"\w+", str(value).casefold(), flags=re.UNICODE))
+
+
+def _answer_evidence_score(case, results):
+    """Return required-fact coverage in retrieved text; alternatives form one fact."""
+    evidence = case.get("answer_evidence", [])
+    if not evidence:
+        return None, []
+    haystack = _normalized_answer_text("\n".join(
+        str(result.get("context", "")) + "\n" + str(result.get("text", ""))
+        for result in results
+    ))
+    matched = []
+    for fact in evidence:
+        alternatives = fact if isinstance(fact, list) else [fact]
+        if not alternatives or not all(isinstance(term, str) and term.strip() for term in alternatives):
+            raise ValueError("answer_evidence entries must be non-empty strings or lists of strings")
+        matched.append(any(_normalized_answer_text(term) in haystack for term in alternatives))
+    return sum(matched) / len(matched), matched
+
+
 def evaluate(args):
     """Page-labelled retrieval evaluation; a smoke benchmark is not an accuracy guarantee."""
     cases = [json.loads(line) for line in Path(args.cases).read_text(encoding="utf-8").splitlines() if line.strip()]
     if not cases:
         raise ValueError("Evaluation cases are empty")
-    details, reciprocal, recalls = [], [], []
+    details, reciprocal, recalls, answer_scores = [], [], [], []
     reranker = None
     if args.reranker:
         from .embeddings import CrossEncoderReranker
@@ -237,12 +261,23 @@ def evaluate(args):
                     first = rank
             reciprocal.append(1 / first if first else 0)
             recalls.append(len(found) / len(relevant))
-            details.append({"query": case["query"], "first_relevant_rank": first or None,
-                            "page_recall": recalls[-1], "retrieved_ids": [r["id"] for r in results]})
+            answer_score, matched_evidence = _answer_evidence_score(case, results)
+            if answer_score is not None:
+                answer_scores.append(answer_score)
+            details.append({"query": case["query"], "model_answer": case.get("model_answer"),
+                            "first_relevant_rank": first or None, "page_recall": recalls[-1],
+                            "answer_evidence_recall": answer_score, "matched_answer_evidence": matched_evidence,
+                            "retrieved_ids": [r["id"] for r in results]})
     report = {"cases": len(cases), "k": args.k, "mode": args.mode,
               "reranker": args.reranker,
               "hit_rate": sum(r > 0 for r in reciprocal) / len(cases),
-              "mrr": sum(reciprocal) / len(cases), "mean_page_recall": sum(recalls) / len(cases), "details": details}
+              "mrr": sum(reciprocal) / len(cases), "mean_page_recall": sum(recalls) / len(cases),
+              "answer_cases": len(answer_scores),
+              "answer_hit_rate": (sum(score == 1 for score in answer_scores) / len(answer_scores)
+                                  if answer_scores else None),
+              "mean_answer_evidence_recall": (sum(answer_scores) / len(answer_scores)
+                                              if answer_scores else None),
+              "details": details}
     write_json(args.output, report)
     print(json.dumps(report, indent=2))
     return 0

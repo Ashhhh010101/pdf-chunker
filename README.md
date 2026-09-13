@@ -86,14 +86,19 @@ Search supports `--category`, `--document-id`, `-k`, and `--expand`. Results con
 .venv/Scripts/python -m semantic_chunker evaluate tests/retrieval_cases.jsonl --index output/corpus/index.sqlite --output output/evaluation.json -k 5
 ```
 
-Each evaluation line has `query` and `relevant: [{"source": "filename.pdf", "pages": [1]}]`; an optional `category` restricts retrieval. Metrics are hit rate, reciprocal rank and recall over the labelled source/page pairs. Create evaluation cases from your own PDFs and real user questions before choosing a model or tuning thresholds.
+Each evaluation line has `query` and `relevant: [{"source": "filename.pdf", "pages": [1]}]`; an optional `category` restricts retrieval. Cases may also contain a human-written `model_answer` and `answer_evidence`. Each `answer_evidence` item is a required phrase, or a list of acceptable alternative phrases for one fact. The evaluator reports both page-retrieval metrics and how much required answer evidence occurs anywhere in the retrieved top-k chunks. This measures whether retrieval supplied the facts needed to produce the model answer; it does not judge generated prose or entailment.
+
+```json
+{"query":"What is the warranty?","model_answer":"The minimum warranty is three years.","answer_evidence":[["three years","3 years"]],"relevant":[{"source":"example.pdf","pages":[5]}]}
+```
+
+Create evaluation cases from your own PDFs and real user questions before choosing a model or tuning thresholds. Keep answers independently reviewed, concise, and limited to facts on the labelled pages.
 
 OCR, headings, table boundaries and reading order are heuristic. Scan OCR does not recover original bold typography. Complex borderless/rotated/nested tables, merged scan cells, diagrams, handwriting, and mixed scripts need review or a stronger document-layout/OCR backend. Native borderless tables remain positioned text; the parser does not invent cell structure. Multi-page tables remain separate page-local table elements: section ancestry provides context, but uncertain joins are not asserted. Native PDF tables may have ambiguous first-row headers; inspect the exported cells for critical facts. Images occupying a substantial page region, low OCR confidence, damaged text and sparse pages are explicitly flagged. The parser retains OCR text and coordinates but does not validate extracted amounts or dates against a second OCR engine.
 
 `--strict` exits nonzero for document failures or pages left needing OCR. Other review warnings remain in the report and are not a certification that every figure or cell was understood. Inspect them before production use. Exact dense scanning is simple and reproducible for small and medium corpora; use a vector database/ANN index for much larger corpora. The optional reranker has its own sequence limit and may truncate long context; keep chunks modest and evaluate it against your labels.
 
 Implementation references: [PyMuPDF page extraction, OCR and tables](https://pymupdf.readthedocs.io/en/latest/page.html), [Sentence Transformers semantic search](https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html), and [retrieve and rerank](https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html).
-
 
 
 

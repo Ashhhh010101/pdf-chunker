@@ -233,3 +233,20 @@ def test_reranker_scores_answer_beyond_first_window():
     reranker = CrossEncoderReranker.__new__(CrossEncoderReranker)
     reranker.model = Model()
     assert reranker.score("warranty", ["filler " * 200 + "answer", "irrelevant"] ) == [10.0, -1.0]
+
+
+def test_answer_evidence_score_handles_alternatives_and_missing_facts():
+    from semantic_chunker.cli import _answer_evidence_score
+    case = {"answer_evidence": ["three years", ["OEM engineer", "manufacturer engineer"], "Delhi"]}
+    results = [{"context": "Warranty", "text": "Minimum three years; service by an OEM engineer."}]
+    score, matched = _answer_evidence_score(case, results)
+    assert score == pytest.approx(2 / 3)
+    assert matched == [True, True, False]
+    assert _answer_evidence_score({}, results) == (None, [])
+
+
+def test_answer_evidence_score_normalizes_case_punctuation_and_spacing():
+    from semantic_chunker.cli import _answer_evidence_score
+    case = {"answer_evidence": ["Rs. 4,05,000", "4 months"]}
+    results = [{"context": "", "text": "RS 4 05 000\n4   MONTHS"}]
+    assert _answer_evidence_score(case, results) == (1.0, [True, True])
