@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 import json
 from pathlib import Path
 import re
 import sqlite3
+import time
 
 import numpy as np
 
@@ -13,12 +15,20 @@ from .models import Chunk, Document
 
 class SearchIndex:
     """Transactional SQLite FTS5 + exact dense retrieval, suitable for local corpora."""
+    QUERY_STOPWORDS = {
+        "a", "an", "and", "are", "as", "be", "by", "can", "does", "for", "from", "how", "in", "is",
+        "it", "of", "on", "or", "the", "this", "to", "what", "when", "which", "who", "with",
+        "extract", "identify", "list", "prepare", "state", "summarize", "entry", "matrix", "row",
+    }
     def __init__(self, path: str | Path, embedder=None):
         path = Path(path)
         path.parent.mkdir(parents=True, exist_ok=True)
+        self.path = path.resolve()
         self.db = sqlite3.connect(path)
         self.db.row_factory = sqlite3.Row
         self.embedder = embedder
+        self._dense_cache = None
+        self.last_search_timings = {}
         self.db.executescript("""
             PRAGMA foreign_keys=ON;
             CREATE TABLE IF NOT EXISTS settings(key TEXT PRIMARY KEY, value TEXT NOT NULL);
@@ -76,6 +86,7 @@ class SearchIndex:
                 self.db.execute("INSERT INTO chunks_fts VALUES(?,?,?)", (c.id, c.context, c.text))
             if self.embedder:
                 self.db.execute("INSERT OR REPLACE INTO settings VALUES('embedding_model',?)", (self.embedder.name,))
+        self._dense_cache = None
 
     def _delete(self, doc_id):
         self.db.execute("DELETE FROM chunks_fts WHERE id IN (SELECT id FROM chunks WHERE document_id=?)", (doc_id,))
@@ -84,13 +95,61 @@ class SearchIndex:
     def delete_document(self, doc_id: str):
         with self.db:
             self._delete(doc_id)
+        self._dense_cache = None
 
     def stats(self):
         return {**{t: self.db.execute(f"SELECT count(*) FROM {t}").fetchone()[0]
                    for t in ("documents", "sections", "chunks")}, "embedding_model": self.embedding_model}
 
+    @staticmethod
+    def query_variants(query: str) -> list[str]:
+        """Conservative variants for tender-compliance instruction wording."""
+        variants = []
+        stripped = re.sub(
+            r"^(?:please\s+)?(?:extract|identify|summarize|state|list|prepare)\s+", "", query,
+            flags=re.IGNORECASE,
+        )
+        stripped = re.sub(r"\b(?:for|in)\s+the\s+(?:technical |commercial )?compliance[- ]matrix\b", "", stripped,
+                          flags=re.IGNORECASE)
+        stripped = " ".join(stripped.split()).strip(" .?")
+        if stripped and stripped.casefold() != query.strip(" .?").casefold():
+            variants.append(stripped)
+        acronym = re.sub(r"\bEMD\b", "earnest money deposit", query, flags=re.IGNORECASE)
+        acronym = re.sub(r"\bOEM\b", "original equipment manufacturer", acronym, flags=re.IGNORECASE)
+        if acronym != query:
+            variants.append(acronym)
+        return list(dict.fromkeys(variants))[:2]
+
+    def _lexical_rows(self, query, condition, params, pool, separate_connection=False):
+        tokens = re.findall(r"\w+", query, flags=re.UNICODE)
+        informative = [token for token in tokens if token.casefold() not in self.QUERY_STOPWORDS]
+        tokens = informative or tokens
+        match = " OR ".join('"' + t + '"' for t in dict.fromkeys(tokens[:80]))
+        if not match:
+            return []
+        sql = f"""
+            SELECT c.id, c.payload, bm25(chunks_fts, 0, 0.7, 1) AS score
+            FROM chunks_fts JOIN chunks c ON c.id=chunks_fts.id
+            WHERE chunks_fts MATCH ? AND {condition} ORDER BY score, c.id LIMIT ?
+        """
+        if not separate_connection:
+            return self.db.execute(sql, [match] + params + [pool]).fetchall()
+        uri = self.path.as_uri() + "?mode=ro"
+        with sqlite3.connect(uri, uri=True) as db:
+            db.row_factory = sqlite3.Row
+            return db.execute(sql, [match] + params + [pool]).fetchall()
+
+    def _ensure_dense_cache(self):
+        if self._dense_cache is None:
+            rows = self.db.execute("SELECT id,payload,document_id,category,vector FROM chunks WHERE vector IS NOT NULL").fetchall()
+            matrix = (np.stack([np.frombuffer(row["vector"], dtype="<f4") for row in rows])
+                      if rows else np.empty((0, 0), dtype=np.float32))
+            self._dense_cache = (rows, matrix)
+        return self._dense_cache
+
     def search(self, query: str, k: int = 5, mode: str = "hybrid", document_id: str | None = None,
-               category: str | None = None, reranker=None, candidates: int = 50) -> list[dict]:
+               category: str | None = None, reranker=None, candidates: int = 50,
+               parallel: bool = False, query_variants: bool = False) -> list[dict]:
         if mode not in {"lexical", "dense", "hybrid"}:
             raise ValueError("mode must be lexical, dense or hybrid")
         if k < 1 or candidates < 1:
@@ -108,42 +167,68 @@ class SearchIndex:
             where.append("c.category=?")
             params.append(category)
         condition = " AND ".join(where)
-        pool = max(k, candidates)
-        rankings, payloads = {}, {}
-        if mode in {"lexical", "hybrid"}:
-            tokens = re.findall(r"\w+", query, flags=re.UNICODE)
-            # Quote tokens so user queries cannot inject FTS operators/syntax.
-            match = " OR ".join('"' + t + '"' for t in dict.fromkeys(tokens[:80]))
-            rows = [] if not match else self.db.execute(f"""
-                SELECT c.id, c.payload, bm25(chunks_fts, 0, 0.7, 1) AS score
-                FROM chunks_fts JOIN chunks c ON c.id=chunks_fts.id
-                WHERE chunks_fts MATCH ? AND {condition} ORDER BY score, c.id LIMIT ?
-            """, [match] + params + [pool]).fetchall()
-            rankings["lexical"] = [r["id"] for r in rows]
-            payloads.update({r["id"]: json.loads(r["payload"]) for r in rows})
+        # Extra candidates are only useful for fusion, variants, or reranking.
+        pool = k if mode == "lexical" and not reranker and not query_variants else max(k, candidates)
+        started = time.perf_counter()
+        rankings, payloads, dense_query = {}, {}, None
+        variants = self.query_variants(query) if query_variants and mode in {"lexical", "hybrid"} else []
+        lexical_queries = [query] + variants if mode in {"lexical", "hybrid"} else []
+        dense_rows, dense_matrix = self._ensure_dense_cache() if mode in {"dense", "hybrid"} else ([], None)
+
+        if parallel and mode == "hybrid":
+            with ThreadPoolExecutor(max_workers=2 + len(variants)) as executor:
+                lexical_futures = [executor.submit(self._lexical_rows, text, condition, params, pool, True)
+                                   for text in lexical_queries]
+                dense_future = executor.submit(self.embedder.encode_query, query)
+                lexical_results = [future.result() for future in lexical_futures]
+                dense_query = dense_future.result()
+        elif parallel and len(lexical_queries) > 1:
+            with ThreadPoolExecutor(max_workers=len(lexical_queries)) as executor:
+                futures = [executor.submit(self._lexical_rows, text, condition, params, pool, True)
+                           for text in lexical_queries]
+                lexical_results = [future.result() for future in futures]
+            if mode == "dense":
+                dense_query = self.embedder.encode_query(query)
+        else:
+            lexical_results = [self._lexical_rows(text, condition, params, pool) for text in lexical_queries]
+            if mode in {"dense", "hybrid"}:
+                dense_query = self.embedder.encode_query(query)
+
+        for number, rows in enumerate(lexical_results):
+            method = "lexical" if number == 0 else f"lexical_variant_{number}"
+            rankings[method] = [row["id"] for row in rows]
+            payloads.update({row["id"]: json.loads(row["payload"]) for row in rows})
         if mode in {"dense", "hybrid"}:
-            q = np.asarray(self.embedder.encode_query(query), dtype=np.float32)
-            rows = self.db.execute(f"SELECT c.id,c.payload,c.vector FROM chunks c WHERE {condition} AND c.vector IS NOT NULL", params).fetchall()
-            if rows:
-                matrix = np.stack([np.frombuffer(r["vector"], dtype="<f4") for r in rows])
+            q = np.asarray(dense_query, dtype=np.float32)
+            rows, matrix = dense_rows, dense_matrix
+            eligible = [i for i, row in enumerate(rows)
+                        if (not document_id or row["document_id"] == document_id)
+                        and (not category or row["category"] == category)]
+            if eligible:
+                filtered_matrix = matrix[eligible]
                 if matrix.shape[1] != q.shape[0] or not np.isfinite(q).all():
                     raise ValueError("Query vector does not match index dimensions or is non-finite")
-                scores = matrix @ q
+                scores = filtered_matrix @ q
                 selected = np.argsort(-scores, kind="stable")[:pool]
-                rankings["dense"] = [rows[i]["id"] for i in selected]
-                payloads.update({rows[i]["id"]: json.loads(rows[i]["payload"]) for i in selected})
+                chosen = [eligible[i] for i in selected]
+                rankings["dense"] = [rows[i]["id"] for i in chosen]
+                payloads.update({rows[i]["id"]: json.loads(rows[i]["payload"]) for i in chosen})
+        retrieval_finished = time.perf_counter()
         fused = defaultdict(float)
         ranks = defaultdict(dict)
         for method, ids in rankings.items():
+            weight = 1.5 if method == "lexical" else .7 if method.startswith("lexical_variant") else 1.0
             for rank, cid in enumerate(ids, 1):
-                fused[cid] += 1 / (60 + rank)
+                fused[cid] += weight / (60 + rank)
                 ranks[cid][method] = rank
         selected = sorted(fused, key=lambda cid: (-fused[cid], cid))[:pool]
+        merged_finished = time.perf_counter()
         rerank_scores = {}
         if reranker and selected:
             values = reranker.score(query, [payloads[cid]["context"] + "\n" + payloads[cid]["text"] for cid in selected])
             rerank_scores = dict(zip(selected, values))
             selected.sort(key=lambda cid: (-rerank_scores[cid], -fused[cid]))
+        rerank_finished = time.perf_counter()
         results = []
         for cid in selected[:k]:
             result = payloads[cid]
@@ -152,6 +237,12 @@ class SearchIndex:
             result["retrieval_mode"] = mode
             result["score_type"] = "cross_encoder" if reranker else "reciprocal_rank_fusion"
             results.append(result)
+        self.last_search_timings = {
+            "retrieval_ms": round((retrieval_finished - started) * 1000, 3),
+            "merge_ms": round((merged_finished - retrieval_finished) * 1000, 3),
+            "rerank_ms": round((rerank_finished - merged_finished) * 1000, 3),
+            "format_ms": round((time.perf_counter() - rerank_finished) * 1000, 3),
+        }
         return results
 
     def expand(self, chunk_id: str, max_tokens: int = 1600) -> dict:
