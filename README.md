@@ -86,7 +86,7 @@ Search supports `--category`, `--document-id`, `-k`, and `--expand`. Results con
 .venv/Scripts/python -m semantic_chunker evaluate tests/retrieval_cases.jsonl --index output/corpus/index.sqlite --output output/evaluation.json -k 5
 ```
 
-Each evaluation line has `query` and `relevant: [{"source": "filename.pdf", "pages": [1]}]`; an optional `category` restricts retrieval. Cases may also contain a human-written `model_answer` and `answer_evidence`. Each `answer_evidence` item is a required phrase, or a list of acceptable alternative phrases for one fact. The evaluator reports both page-retrieval metrics and how much required answer evidence occurs anywhere in the retrieved top-k chunks. This measures whether retrieval supplied the facts needed to produce the model answer; it does not judge generated prose or entailment.
+Each evaluation line has `query` and `relevant: [{"source": "filename.pdf", "pages": [1]}]`; an optional `category` restricts retrieval. Cases may also contain a human-written `model_answer` and `answer_evidence`. Each `answer_evidence` item is a required phrase, or a list of acceptable alternative phrases for one fact. The evaluator reports page-retrieval metrics, per-query retrieval latency (plus mean/p50/p95), and how much required answer evidence occurs anywhere in the retrieved top-k chunks. Latency excludes answer scoring and report serialization. Answer evidence measures whether retrieval supplied the facts needed to produce the model answer; it does not judge generated prose or entailment.
 
 ```json
 {"query":"What is the warranty?","model_answer":"The minimum warranty is three years.","answer_evidence":[["three years","3 years"]],"relevant":[{"source":"example.pdf","pages":[5]}]}
@@ -94,11 +94,14 @@ Each evaluation line has `query` and `relevant: [{"source": "filename.pdf", "pag
 
 Create evaluation cases from your own PDFs and real user questions before choosing a model or tuning thresholds. Keep answers independently reviewed, concise, and limited to facts on the labelled pages.
 
+`tests/tender_compliance_cases.jsonl` contains 100 tender-compliance questions grouped into ten verified intents. Each fact is expressed ten ways to test robustness to procurement-analyst phrasing such as “extract,” “prepare the compliance-matrix row,” “mandatory,” and “does the bidder comply.” Regenerate it with `python tests/build_tender_compliance_cases.py` after editing the reviewed intent definitions.
+
+For a compliance matrix generated from one known tender, add `--scope-to-relevant-document` during evaluation. This applies the same document filter that production should pass to `SearchIndex.search(document_id=...)`; omit it only when benchmarking discovery across an entire mixed corpus.
+
+Hybrid retrieval can run BM25 and query embedding concurrently with `--parallel`; `--query-variants` additionally searches conservative instruction-stripped/acronym-expanded variants. Both are opt-in because model quality and CPU contention can make lexical retrieval faster and more accurate on a specialized corpus. Use `--candidates N` to bound fusion/reranking work and benchmark on deployment hardware. Evaluation details include retrieval, merge, rerank, and formatting stage timings.
+
 OCR, headings, table boundaries and reading order are heuristic. Scan OCR does not recover original bold typography. Complex borderless/rotated/nested tables, merged scan cells, diagrams, handwriting, and mixed scripts need review or a stronger document-layout/OCR backend. Native borderless tables remain positioned text; the parser does not invent cell structure. Multi-page tables remain separate page-local table elements: section ancestry provides context, but uncertain joins are not asserted. Native PDF tables may have ambiguous first-row headers; inspect the exported cells for critical facts. Images occupying a substantial page region, low OCR confidence, damaged text and sparse pages are explicitly flagged. The parser retains OCR text and coordinates but does not validate extracted amounts or dates against a second OCR engine.
 
 `--strict` exits nonzero for document failures or pages left needing OCR. Other review warnings remain in the report and are not a certification that every figure or cell was understood. Inspect them before production use. Exact dense scanning is simple and reproducible for small and medium corpora; use a vector database/ANN index for much larger corpora. The optional reranker has its own sequence limit and may truncate long context; keep chunks modest and evaluate it against your labels.
 
 Implementation references: [PyMuPDF page extraction, OCR and tables](https://pymupdf.readthedocs.io/en/latest/page.html), [Sentence Transformers semantic search](https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html), and [retrieve and rerank](https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html).
-
-
-

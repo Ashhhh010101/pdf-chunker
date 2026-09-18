@@ -205,7 +205,8 @@ def search(args):
         from .embeddings import CrossEncoderReranker
         reranker = CrossEncoderReranker(args.reranker, args.model_cache)
     with open_search(args) as index:
-        results = index.search(args.query, args.k, args.mode, args.document_id, args.category, reranker)
+        results = index.search(args.query, args.k, args.mode, args.document_id, args.category, reranker,
+                               args.candidates, args.parallel, args.query_variants)
         if args.expand:
             for result in results:
                 result["parent_context"] = index.expand(result["id"], args.context_tokens)
@@ -241,17 +242,33 @@ def evaluate(args):
     cases = [json.loads(line) for line in Path(args.cases).read_text(encoding="utf-8").splitlines() if line.strip()]
     if not cases:
         raise ValueError("Evaluation cases are empty")
-    details, reciprocal, recalls, answer_scores = [], [], [], []
+    details, reciprocal, recalls, answer_scores, query_latencies = [], [], [], [], []
     reranker = None
     if args.reranker:
         from .embeddings import CrossEncoderReranker
         reranker = CrossEncoderReranker(args.reranker, args.model_cache)
     with open_search(args) as index:
+        source_documents = {}
+        if args.scope_to_relevant_document:
+            for row in index.db.execute("SELECT id, source FROM documents"):
+                source_documents.setdefault(Path(row["source"]).name, []).append(row["id"])
         for case in cases:
             relevant = {(r["source"], int(page)) for r in case["relevant"] for page in r["pages"]}
             if not relevant:
                 raise ValueError("Every case must have relevant source/page labels")
-            results = index.search(case["query"], args.k, args.mode, category=case.get("category"), reranker=reranker)
+            document_id = None
+            if args.scope_to_relevant_document:
+                sources = {source for source, _ in relevant}
+                if len(sources) != 1 or len(source_documents.get(next(iter(sources)), [])) != 1:
+                    raise ValueError("Document-scoped evaluation requires exactly one indexed relevant source per case")
+                document_id = source_documents[next(iter(sources))][0]
+            query_started = time.perf_counter()
+            results = index.search(case["query"], args.k, args.mode, document_id=document_id,
+                                   category=case.get("category"), reranker=reranker,
+                                   candidates=args.candidates, parallel=args.parallel,
+                                   query_variants=args.query_variants)
+            query_latency_ms = (time.perf_counter() - query_started) * 1000
+            query_latencies.append(query_latency_ms)
             found, first = set(), 0
             for rank, result in enumerate(results, 1):
                 pages = {(Path(c["source"]).name, c["page"]) for c in result["citations"]}
@@ -264,12 +281,22 @@ def evaluate(args):
             answer_score, matched_evidence = _answer_evidence_score(case, results)
             if answer_score is not None:
                 answer_scores.append(answer_score)
-            details.append({"query": case["query"], "model_answer": case.get("model_answer"),
+            details.append({"case_id": case.get("case_id"), "intent": case.get("intent"),
+                            "query": case["query"], "model_answer": case.get("model_answer"),
+                            "query_latency_ms": round(query_latency_ms, 3),
+                            "search_stages_ms": index.last_search_timings,
                             "first_relevant_rank": first or None, "page_recall": recalls[-1],
                             "answer_evidence_recall": answer_score, "matched_answer_evidence": matched_evidence,
                             "retrieved_ids": [r["id"] for r in results]})
+    sorted_latencies = sorted(query_latencies)
+    percentile_95_index = max(0, (95 * len(sorted_latencies) + 99) // 100 - 1)
     report = {"cases": len(cases), "k": args.k, "mode": args.mode,
-              "reranker": args.reranker,
+              "reranker": args.reranker, "candidates": args.candidates,
+              "parallel": args.parallel, "query_variants": args.query_variants,
+              "scope_to_relevant_document": args.scope_to_relevant_document,
+              "mean_query_latency_ms": round(sum(query_latencies) / len(query_latencies), 3),
+              "p50_query_latency_ms": round(sorted_latencies[(len(sorted_latencies) - 1) // 2], 3),
+              "p95_query_latency_ms": round(sorted_latencies[percentile_95_index], 3),
               "hit_rate": sum(r > 0 for r in reciprocal) / len(cases),
               "mrr": sum(reciprocal) / len(cases), "mean_page_recall": sum(recalls) / len(cases),
               "answer_cases": len(answer_scores),
@@ -317,6 +344,9 @@ def main(argv=None):
         p.add_argument("--model-cache", default=".model-cache")
         p.add_argument("-k", type=int, default=5)
         p.add_argument("--reranker")
+        p.add_argument("--candidates", type=int, default=50)
+        p.add_argument("--parallel", action="store_true", help="Run lexical and dense retrieval concurrently")
+        p.add_argument("--query-variants", action="store_true", help="Add conservative compliance-query variants")
         if command == "search":
             p.add_argument("query")
             p.add_argument("--category")
@@ -327,6 +357,8 @@ def main(argv=None):
         else:
             p.add_argument("cases")
             p.add_argument("--output", default="output/evaluation.json")
+            p.add_argument("--scope-to-relevant-document", action="store_true",
+                           help="Evaluate within each case's single labelled document (known-tender workflow)")
             p.set_defaults(func=evaluate)
     args = parser.parse_args(argv)
     try:

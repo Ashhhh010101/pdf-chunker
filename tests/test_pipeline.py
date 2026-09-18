@@ -1,5 +1,6 @@
 from dataclasses import replace
 import json
+from pathlib import Path
 
 import fitz
 import numpy as np
@@ -250,3 +251,36 @@ def test_answer_evidence_score_normalizes_case_punctuation_and_spacing():
     case = {"answer_evidence": ["Rs. 4,05,000", "4 months"]}
     results = [{"context": "", "text": "RS 4 05 000\n4   MONTHS"}]
     assert _answer_evidence_score(case, results) == (1.0, [True, True])
+
+
+def test_tender_compliance_benchmark_has_100_unique_grounded_queries():
+    cases_path = Path(__file__).with_name("tender_compliance_cases.jsonl")
+    cases = [json.loads(line) for line in cases_path.read_text(encoding="utf-8").splitlines()]
+    assert len(cases) == 100
+    assert len({case["case_id"] for case in cases}) == 100
+    assert len({case["query"].casefold() for case in cases}) == 100
+    assert {case["intent"] for case in cases} == {
+        "gpu_warranty", "gpu_security", "gpu_local_support", "gpu_installation", "gpu_debarment",
+        "nhb_contract_term", "nhb_fees_emd", "nhb_prebid_queries", "housekeeping_eligibility",
+        "ups_tender_summary"
+    }
+    assert all(case["model_answer"] and case["answer_evidence"] and case["relevant"] for case in cases)
+    corpus = Path(__file__).parents[1] / "test-doc"
+    sources = {path.name: path for path in corpus.rglob("*.pdf")}
+    for case in cases:
+        for label in case["relevant"]:
+            assert label["source"] in sources
+            with fitz.open(sources[label["source"]]) as pdf:
+                assert all(1 <= page <= pdf.page_count for page in label["pages"])
+
+
+def test_parallel_hybrid_and_compliance_query_variants(tmp_path):
+    doc = simple_doc([Element("a", 1, [0, 0, 20, 20], "paragraph",
+                              "OEM warranty and earnest money deposit", section_id="s")])
+    with SearchIndex(tmp_path / "index.sqlite", FakeEmbedder()) as index:
+        index.upsert(doc, StructuralChunker().chunk(doc))
+        hits = index.search("Identify the EMD and OEM warranty for the compliance matrix",
+                            mode="hybrid", parallel=True, query_variants=True)
+        assert hits and {"lexical", "dense"} <= set(hits[0]["retrieval_ranks"])
+        assert SearchIndex.query_variants("Identify the EMD for the compliance matrix")
+        assert index.last_search_timings.keys() == {"retrieval_ms", "merge_ms", "rerank_ms", "format_ms"}
